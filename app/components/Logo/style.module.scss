@@ -1,7 +1,7 @@
 .logo {
 	a {
 		text-decoration: none;
-		color: white;
+		color: var(--light);
 		display: inline-block;
 		text-indent: -1234em;
 		background: url("./images/logo.png") center no-repeat;
@@ -12,7 +12,7 @@
 
 		&:hover,
 		&:visited {
-			color: white;
+			color: var(--light);
 		}
 
 		&:hover {
