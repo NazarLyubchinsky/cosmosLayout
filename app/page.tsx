@@ -1,3 +1,4 @@
+"use client"
 import cl from 'classnames';
 import styles from './styles/home.module.scss';
 
@@ -6,6 +7,9 @@ import { SocialNetworks } from './components/SocialNetworks';
 import { Button } from './components/Button';
 import { Navigation } from './components/Navigation';
 import { Title } from './components/Title';
+// import { Diamond } from './components/Diamond';
+import { ArtMenu } from './components/ArtMenu';
+
 export default function Home() {
 	return (
 		<div>
@@ -17,7 +21,7 @@ export default function Home() {
 					<Logo />
 					<SocialNetworks />
 					<Button
-					// onClick={() => { console.log('click') }}
+						onClick={() => { }}
 					>
 						Whitepaper
 					</Button>
@@ -30,14 +34,14 @@ export default function Home() {
 					<ul className={styles.buttonList}>
 						<li>
 							<Button
-							// onClick={() => { console.log('click') }}
+								onClick={() => { }}
 							>
 								Mint
 							</Button>
 						</li>
 						<li>
 							<Button
-							// onClick={() => { console.log('click') }}
+								onClick={() => { }}
 							>
 								Connect Wallet
 							</Button>
@@ -45,6 +49,17 @@ export default function Home() {
 					</ul>
 				</div>
 			</section >
+
+			<section className={cl(styles.section, styles.sectionEarth)}>
+				<Title size="Large">
+					Factions
+				</Title>
+				<ArtMenu />
+			</section>
+
+			<section className={cl(styles.section, styles.sectionRoadMap)}>
+
+			</section>
 		</div>
 	)
 }
