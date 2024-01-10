@@ -1,3 +1,5 @@
+@import '../../styles/mixins.scss';
+
 .socialNetworks {
 	display: flex;
 	gap: 3vw;
@@ -11,15 +13,8 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: 100% auto;
-		transition: opacity 0.3s;
-
-		&:hover,
-		&:visited {
-			color: var(--light);
-		}
-		&:hover{
-			opacity: 0.7;
-		}
+		@include hoverAndvisited;
+		
 	}
 
 	&DisCord {

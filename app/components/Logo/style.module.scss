@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .logo {
 	a {
 		text-decoration: none;
@@ -10,13 +12,6 @@
 		height: 1.3rem;
 		transition: opacity 0.3s;
 
-		&:hover,
-		&:visited {
-			color: var(--light);
-		}
-
-		&:hover {
-			opacity: 0.7;
-		}
+	@include hoverAndvisited;
 	}
 }

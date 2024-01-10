@@ -39,7 +39,7 @@ const links = [
 ];
 
 export const ArtMenu: React.FC<ArtMenuProps> = () => {
-	const [openedId, setOpenedId] = useState(0);
+	const [openedId, setOpenedId] = useState(1);
 	return (
 		<div className={styles.artMenu}>
 			{links.map((link) => (

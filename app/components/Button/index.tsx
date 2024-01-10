@@ -5,12 +5,16 @@ import styles from './style.module.scss';
 import cl from 'classnames';
 
 export type TypeArtButton = 'BluePurple' | 'GreenYellow' | 'Blue' | 'YellowPink';
+// export type TypeArtButton2 = 'Pink' | 'LightBlue' | 'LightBluePurple' | 'Blue';
+
 
 interface ButtonProps {
 	onClick: () => void;
 	children: ReactNode;
 	className?: string;
-	type?: TypeArtButton;
+	type?: TypeArtButton 
+	// | TypeArtButton2
+	;
 }
 
 export const Button: React.FC<ButtonProps> = ({

@@ -1,0 +1,15 @@
+@mixin hover() {
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+@mixin hoverAndvisited() {
+	transition: all 0.3s;
+
+	&:hover,
+	&:visited {
+		color: var(--light);
+		opacity: 0.7;
+	}
+}

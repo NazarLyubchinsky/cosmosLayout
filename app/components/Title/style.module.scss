@@ -3,13 +3,16 @@
 	font-weight: 400;
 	line-height: 1.1;
 	letter-spacing: 2vw;
-	text-align: center;
 	text-transform: uppercase;
-
+	&Small {
+		font-size: 4rem;
+		letter-spacing: 1.46rem;
+		line-height: normal;
+		text-align: start;
+	}
 	&Medium {
-		font-size: 4.7143rem;
+		font-size: 4.125rem;
 		margin-bottom: 1.4286rem;
-		text-align: center;
 	}
 
 	&Large {

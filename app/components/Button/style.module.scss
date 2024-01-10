@@ -1,3 +1,4 @@
+@import "../../styles/mixins.scss";
 $size-height: 0.3571rem;
 $size-top: 1.8571rem;
 $size-bottom: 2.4286rem;
@@ -10,7 +11,7 @@ $size-border: 2px;
 		1.1429rem/1rem "NeueMachina",
 		sans-serif;
 	background: none;
-	color: white;
+	color: var(--light);
 	padding: 1.4286rem 1.7857rem 1.1429rem;
 	transition: all 0.3s;
 	cursor: pointer;
@@ -24,19 +25,19 @@ $size-border: 2px;
 
 	&:hover {
 		&::after {
-			background: white;
+			background: var(--light);
 		}
 
 		.artButtonText {
-			color: black;
+			color: var(--dark);
 		}
 
 		.artButtonAngleLeft {
-			border-top-color: black;
+			border-top-color: var(--dark);
 		}
 
 		.artButtonAngleRight {
-			border-bottom-color: black;
+			border-bottom-color: var(--dark);
 		}
 	}
 
@@ -70,7 +71,7 @@ $size-border: 2px;
 			$size-border calc(100% - $size-border - $size-height),
 			0 calc(100% - $size-border - $size-height)
 		);
-		background: white;
+		background: var(--light);
 	}
 
 	&::after {
@@ -102,26 +103,28 @@ $size-border: 2px;
 		width: 0;
 		height: 0;
 		z-index: 1;
-		border-top: 10px solid white;
+		border-top: 10px solid var(--light);
 		border-right: 10px solid transparent;
 		transition: all 0.3s;
 	}
 
 	&AngleRight {
+		
 		position: absolute;
 		bottom: 10px;
 		right: 4.5px;
 		width: 0;
 		height: 0;
 		z-index: 1;
-		border-bottom: 10px solid white;
+		border-bottom: 10px solid var(--light);
 		border-left: 10px solid transparent;
 		transition: all 0.3s;
 	}
 
 	&Type {
 		font-weight: bold;
-		color: black;
+		color: var(--dark);
+		
 
 		.artButtonAngleLeft,
 		.artButtonAngleRight {
@@ -130,6 +133,7 @@ $size-border: 2px;
 	}
 
 	&BluePurple {
+		transition: all 0.3s;
 		&::after {
 			background: linear-gradient(to right, #89dcd5 0%, #9d65bf 100%) !important;
 		}
@@ -137,9 +141,11 @@ $size-border: 2px;
 		&::before {
 			background: linear-gradient(135deg, #e4f8f7 0%, #beebe8 19%, #a66bc3 79%, #caaddd 100%) !important;
 		}
+		@include hover;
 	}
 
 	&Blue {
+		transition: all 0.3s;
 		&::after {
 			background: linear-gradient(to right, #89dcd5 0%, #7cb1bb 100%) !important;
 		}
@@ -147,9 +153,11 @@ $size-border: 2px;
 		&::before {
 			background: linear-gradient(135deg, #e1effe 0%, #b5d6f9 21%, #85b8c0 79%, #b9d6db 100%) !important;
 		}
+		@include hover;
 	}
 
 	&GreenYellow {
+		transition: all 0.3s;
 		&::after {
 			background: linear-gradient(to right, #a9f0f4 0%, #eedd75 100%) !important;
 		}
@@ -157,9 +165,11 @@ $size-border: 2px;
 		&::before {
 			background: linear-gradient(135deg, #ecfbfe 0%, #d0f7f8 20%, #f2de7b 79%, #f5ecb3 100%) !important;
 		}
+		@include hover;
 	}
 
 	&YellowPink {
+		transition: all 0.3s;
 		&::after {
 			background: linear-gradient(to right, #f4bb42 0%, #f5bdc4 100%) !important;
 		}
@@ -174,5 +184,6 @@ $size-border: 2px;
 				#f8dbde 100%
 			) !important;
 		}
+		@include hover;
 	}
 }
