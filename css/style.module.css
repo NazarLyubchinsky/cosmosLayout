@@ -1,0 +1,169 @@
+.artMenu {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 200px;
+  gap: 226px;
+  position: relative;
+  top: 11.125rem;
+}
+.artMenu::after {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 2px;
+  width: 4px;
+  bottom: 2px;
+  background: var(--light);
+  z-index: 0;
+}
+.artMenuItem {
+  color: var(--light);
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  font-size: 1.5714rem;
+  font-family: "TTOctosquares", sans-serif;
+  padding-left: 3.8rem;
+  position: relative;
+  z-index: 1;
+}
+.artMenuItemTitle {
+  color: var(--light);
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+  text-align: start;
+}
+.artMenuItemTitle:hover {
+  opacity: 0.8;
+}
+.artMenuItemContent {
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1.875rem;
+  padding-right: 4rem;
+  text-align: start;
+}
+.artMenuItemContentActive {
+  color: var(--primary);
+}
+.artMenuItemContentTop {
+  font-family: "NeueMachina", sans-serif;
+  font-size: 2.5625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+.artMenuItemContentCenter {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+.artMenuItemContentBottom {
+  opacity: 0.95;
+  font-family: "Mazzard", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.artMenuItem:visited, .artMenuItem:hover {
+  color: var(--light);
+}
+.artMenuItem .artMenuDecorator {
+  background-image: url("./images/white_left_border.png");
+}
+.artMenuItem:hover .artMenuDecorator {
+  background-image: url("./images/color_left_border.png");
+}
+.artMenuItem:nth-child(odd) .artMenuDecorator {
+  background-image: url("./images/white_right_border.png");
+}
+.artMenuItem:nth-child(odd):hover .artMenuDecorator {
+  background-image: url("./images/color_right_border.png");
+}
+.artMenuItem:last-child .artMenuDecorator {
+  top: auto;
+  bottom: -4px;
+}
+.artMenuDecorator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 3rem;
+  height: 3.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.artMenuItemActive .artMenuItemTitle {
+  color: var(--primary);
+}
+.artMenuItemActive .artMenuDecorator {
+  background-image: url("./images/color_left_border.png");
+}
+.artMenuItemActive .artMenuDecorator:nth-child(odd) {
+  background-image: url("./images/color_right_border.png");
+}
+.artMenuItemActive .artMenuCard {
+  opacity: 1;
+  height: 13.3571rem;
+}
+
+.cardMore {
+  position: absolute;
+  top: -85px;
+}
+.cardMoreButton {
+  cursor: pointer;
+  width: 28.75rem;
+  height: 10.9375rem;
+  -webkit-clip-path: polygon(22% 0, 29% 7%, 100% 7%, 100% 89%, 73% 89%, 65% 100%, 0 100%, 0 0);
+          clip-path: polygon(22% 0, 29% 7%, 100% 7%, 100% 89%, 73% 89%, 65% 100%, 0 100%, 0 0);
+  background: linear-gradient(250deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  border-color: unset;
+  border: unset;
+  padding: 0;
+}
+.cardMoreButtonActive {
+  background-color: #fff;
+  width: 31.25rem;
+  height: 11.875rem;
+}
+.cardMoreImage {
+  display: block;
+}
+
+.button {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.ellipsesIcon {
+  position: absolute;
+  top: 0;
+}
+
+.ellipsesIcon2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sectionRoadMapBg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-height: 100%;
+}

@@ -5,7 +5,6 @@ import styles from './style.module.scss';
 import cl from 'classnames';
 
 export type TypeArtButton = 'BluePurple' | 'GreenYellow' | 'Blue' | 'YellowPink';
-// export type TypeArtButton2 = 'Pink' | 'LightBlue' | 'LightBluePurple' | 'Blue';
 
 
 interface ButtonProps {
@@ -13,7 +12,6 @@ interface ButtonProps {
 	children: ReactNode;
 	className?: string;
 	type?: TypeArtButton 
-	// | TypeArtButton2
 	;
 }
 

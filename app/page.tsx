@@ -1,26 +1,37 @@
 "use client"
-import cl from 'classnames';
-import styles from './styles/home.module.scss';
 
-import { Title } from './components/Title';
-import { ArtMenu } from './components/ArtMenu';
 import { Main } from './pages/Main';
 import { RoadMap } from './pages/RoadMap';
+import { createContext, useEffect, useState } from 'react';
+import { Earth } from './pages/Earth';
+
+interface ActiveLinkContextValue {
+	activeLinkId: string;
+	setActiveLinkId: (value: string) => void;
+}
 
 
+export const ActiveLinkContext = createContext<ActiveLinkContextValue>({ activeLinkId: '', setActiveLinkId: () => { } });
 export default function Home() {
+	const [activeLinkId, setActiveLinkId] = useState('home');
+
+	useEffect(() => {
+		const id = localStorage.getItem('activeLinkId');
+		if (id) {
+			setActiveLinkId(id);
+		}
+	}, []);
+
 	return (
 		<div>
-			<Main />
+			<ActiveLinkContext.Provider value={{ activeLinkId, setActiveLinkId }}>
+				<Main isActiveid='home' />
 
-			<section className={cl(styles.section, styles.sectionEarth)}>
-				<Title size="Large">
-					Factions
-				</Title>
-				<ArtMenu />
-			</section>
+				<Earth isActiveid='factions' />
 
-			<RoadMap />
+				<RoadMap isActiveid='roadmap' />
+			</ActiveLinkContext.Provider>
+
 		</div>
 	)
 }

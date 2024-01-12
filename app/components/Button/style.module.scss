@@ -132,6 +132,9 @@ $size-border: 2px;
 		}
 	}
 
+
+
+	// ArtMenuItem component
 	&BluePurple {
 		transition: all 0.3s;
 		&::after {
@@ -186,4 +189,5 @@ $size-border: 2px;
 		}
 		@include hover;
 	}
+
 }

@@ -1,14 +1,15 @@
 import cl from 'classnames';
 import styles from '../../styles/home.module.scss'
 import { Title } from '@/app/components/Title';
-import Image from 'next/image';
 import { ArtMenuRoadMap } from '@/app/components/ArtMenuRoadMap';
-
+interface ArtMenuProps {
+	isActiveid: string
+}
 export const RoadMap
-	// : React.FC<ArtMenuProps>
-	= () => {
+	: React.FC<ArtMenuProps>
+	= ({ isActiveid }) => {
 		return (
-			<section className={cl(styles.section, styles.sectionRoadMap)}>
+			<section className={cl(styles.section, styles.sectionRoadMap)} id={isActiveid}>
 				<div>
 					<div className={styles.subTitle}>
 						<span className={styles.subTitleText}>OUR WAY</span>
@@ -39,15 +40,6 @@ export const RoadMap
 					</Title>
 				</div>
 				<ArtMenuRoadMap />
-				<Image
-					src={'/bg/roadMap_3.png'}
-					alt={'roadMap'}
-					width="1000"
-					height="1000"
-					style={{ maxWidth: '100%', objectFit: 'cover', height: 'auto' }}
-					className={styles.sectionRoadMapBg}
-				/>
-
 			</section>
 		);
 	}

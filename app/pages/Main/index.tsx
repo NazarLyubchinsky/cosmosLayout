@@ -6,45 +6,52 @@ import { SocialNetworks } from '@/app/components/SocialNetworks';
 import { Button } from '@/app/components/Button';
 import { Navigation } from '@/app/components/Navigation';
 import { Title } from '@/app/components/Title';
-export const Main
-// : React.FC<ArtMenuProps>
- = () => {
-	return (
-		<section className={cl(styles.section, styles.sectionMain)}>
-			<header
-				className={styles.header}
-				style={{ color: 'black' }}
-			>
-				<Logo />
-				<SocialNetworks />
-				<Button
-					onClick={() => { }}
-				>
-					Whitepaper
-				</Button>
-			</header>
-			<Navigation />
-			<div>
-				<Title>
-					From dust to&nbsp;dawn
-				</Title>
-				<ul className={styles.buttonList}>
-					<li>
-						<Button
-							onClick={() => { }}
-						>
-							Mint
-						</Button>
-					</li>
-					<li>
-						<Button
-							onClick={() => { }}
-						>
-							Connect Wallet
-						</Button>
-					</li>
-				</ul>
-			</div>
-		</section >
-	);
+import { ReactNode } from 'react';
+interface ArtMenuProps {
+	children?: ReactNode
+	isActiveid:string
 }
+export const Main
+	: React.FC<ArtMenuProps>
+	= ({children, isActiveid}) => {
+		return (
+			<section className={cl(styles.section, styles.sectionMain)} id={isActiveid} >
+				<header
+					className={styles.header}
+					style={{ color: 'black' }}
+				>
+					<Logo />
+					<SocialNetworks />
+					<Button
+						onClick={() => { }}
+					>
+						Whitepaper
+					</Button>
+				</header>
+				<Navigation />
+
+				<div>
+					<Title>
+						From dust to&nbsp;dawn
+					</Title>
+					<ul className={styles.buttonList}>
+						<li>
+							<Button
+								onClick={() => { }}
+							>
+								Mint
+							</Button>
+						</li>
+						<li>
+							<Button
+								onClick={() => { }}
+							>
+								Connect Wallet
+							</Button>
+						</li>
+					</ul>
+				</div>
+				{children}
+			</section >
+		);
+	}
