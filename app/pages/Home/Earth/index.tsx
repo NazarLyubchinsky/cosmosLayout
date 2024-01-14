@@ -1,8 +1,9 @@
-import { ArtMenu } from "@/app/components/ArtMenu"
-import { Title } from "@/app/components/Title"
 import cl from 'classnames'
-
 import styles from "@/css/home.module.css"
+
+import { Title } from "@/app/components/Title"
+import { EarthArtMenu } from './EarthArtMenu'
+
 
 interface EarthProps {
 	isActiveid: string
@@ -20,7 +21,7 @@ export const Earth: React.FC<EarthProps> = ({
 			<Title size="Large">
 				Factions
 			</Title>
-			<ArtMenu />
+			<EarthArtMenu />
 		</section>
 	)
 }

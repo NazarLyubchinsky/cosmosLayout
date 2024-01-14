@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 
 
 import styles from './style.module.scss';
-import { ArtMenuItem } from './ArtMenuItem';
+import { EarthArtMenuItem } from './EarthArtMenuItem';
 
-interface ArtMenuProps { }
+interface EarthArtMenuProps { }
 
 const links = [
 	{
@@ -38,12 +38,12 @@ const links = [
 	}
 ];
 
-export const ArtMenu: React.FC<ArtMenuProps> = () => {
+export const EarthArtMenu: React.FC<EarthArtMenuProps> = () => {
 	const [openedId, setOpenedId] = useState(1);
 	return (
 		<div className={styles.artMenu}>
 			{links.map((link) => (
-				<ArtMenuItem
+				<EarthArtMenuItem
 					key={link.id}
 					onClick={(event) => {
 						event.preventDefault();

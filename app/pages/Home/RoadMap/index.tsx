@@ -1,7 +1,8 @@
 import cl from 'classnames';
-import styles from '../../styles/home.module.scss'
+import styles from '../../../styles/home.module.scss'
+
 import { Title } from '@/app/components/Title';
-import { ArtMenuRoadMap } from '@/app/components/ArtMenuRoadMap';
+import { RoadMapArtMenu } from './RoadMapArtMenu';
 interface ArtMenuProps {
 	isActiveid: string
 }
@@ -39,7 +40,7 @@ export const RoadMap
 						<span style={{ marginLeft: "13px" }}>MAP</span>
 					</Title>
 				</div>
-				<ArtMenuRoadMap />
+				<RoadMapArtMenu />
 			</section>
 		);
 	}

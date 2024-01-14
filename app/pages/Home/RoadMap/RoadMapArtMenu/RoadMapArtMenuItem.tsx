@@ -5,7 +5,7 @@ import cl from 'classnames';
 import React from "react";
 export type TypeArtButton = 'Pink' | 'LightBlue' | 'LightBluePurple' | 'Blue' | 'Purple';
 
-interface ArtMenuRoadMapItemProps {
+interface RoadMapArtMenuItemProps {
 	id: number;
 	href: string;
 	title: string;
@@ -32,7 +32,7 @@ const getTypeById = (id: number): { type: TypeArtButton; } => {
 };
 
 
-export const ArtMenuRoadMapItem: React.FC<ArtMenuRoadMapItemProps> = ({
+export const RoadMapArtMenuItem: React.FC<RoadMapArtMenuItemProps> = ({
 	id,
 	href,
 	title,
@@ -58,7 +58,7 @@ export const ArtMenuRoadMapItem: React.FC<ArtMenuRoadMapItemProps> = ({
 					<button
 						className={cl(styles.cardMoreButton, isOpened && styles.cardMoreButtonActive)}
 					>
-						{isOpened && <CreateBlurredEllipsesIcon color={color}  className="ellipsesIcon" />}
+						{isOpened && <CreateBlurredEllipsesIcon color={color} className="ellipsesIcon" />}
 						{!isOpened && (
 							<CreateBlurredEllipsesIcon2
 								className="ellipsesIcon2"
@@ -72,6 +72,8 @@ export const ArtMenuRoadMapItem: React.FC<ArtMenuRoadMapItemProps> = ({
 							<h4 className={styles.artMenuItemContentCenter}>{title}</h4>
 							<h5 className={styles.artMenuItemContentBottom}>{subtitle}</h5>
 						</div>
+						<ButtonAngleLeft isOpened={isOpened} />
+						<ButtonAngleRight isOpened={isOpened} />
 					</button>
 				</div>
 			</Link>
@@ -79,7 +81,22 @@ export const ArtMenuRoadMapItem: React.FC<ArtMenuRoadMapItemProps> = ({
 	);
 };
 
-export const CreateBlurredEllipsesIcon: React.FC<{ className?: string ; color: string;}> = ({ className, color }) => {
+export const ButtonAngleLeft: React.FC<{ isOpened: boolean }> = ({ isOpened }) => {
+	return (
+		<svg className={styles.buttonAngleLeft} xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+			<path d="M0.958452 0.914853L17.4258 17.3822L17.4258 0.914851L0.958452 0.914853Z" fill={isOpened ? "black" : 'white'} />
+		</svg>
+	)
+}
+export const ButtonAngleRight: React.FC<{ isOpened: boolean }> = ({ isOpened }) => {
+	return (
+		<svg className={styles.buttonAngleRight} xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+			<path d="M17.0415 16.4675L0.574217 0.000146866L0.574219 16.4675L17.0415 16.4675Z" fill={isOpened ? "black" : 'white'} />
+		</svg>
+	)
+}
+
+export const CreateBlurredEllipsesIcon: React.FC<{ className?: string; color: string; }> = ({ className, color }) => {
 	const clsName = className;
 	return (
 		<svg className={`${clsName ? styles[clsName] : ''}`} xmlns="http://www.w3.org/2000/svg" width="274" height="176" viewBox="0 0 274 176" fill="none">
@@ -152,3 +169,5 @@ export const CreateBlurredEllipsesIcon2: React.FC<{ className?: string; type: Ty
 		</svg>
 	)
 }
+
+

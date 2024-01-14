@@ -1,9 +1,7 @@
 "use client"
 
-import { Main } from './pages/Main';
-import { RoadMap } from './pages/RoadMap';
 import { createContext, useEffect, useState } from 'react';
-import { Earth } from './pages/Earth';
+import { HomePage } from './pages/Home';
 
 interface ActiveLinkContextValue {
 	activeLinkId: string;
@@ -25,11 +23,7 @@ export default function Home() {
 	return (
 		<div>
 			<ActiveLinkContext.Provider value={{ activeLinkId, setActiveLinkId }}>
-				<Main isActiveid='home' />
-
-				<Earth isActiveid='factions' />
-
-				<RoadMap isActiveid='roadmap' />
+				<HomePage />
 			</ActiveLinkContext.Provider>
 
 		</div>

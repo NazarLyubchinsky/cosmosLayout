@@ -1,12 +1,11 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-
-import { ArtMenuRoadMapItem } from './ArtMenuRoadMapItem';
-
 import styles from './style.module.scss';
 import Image from 'next/image';
 
-interface ArtMenuRoadMapProps { }
+import { RoadMapArtMenuItem } from './RoadMapArtMenuItem';
+
+interface RoadMapArtMenuProps { }
 
 
 const links = [
@@ -61,9 +60,11 @@ const links = [
 	}
 ];
 
-export const ArtMenuRoadMap: React.FC<ArtMenuRoadMapProps> = () => {
+
+export const RoadMapArtMenu: React.FC<RoadMapArtMenuProps> = () => {
 	const [openedId, setOpenedId] = useState(1);
-	const [activeColor, setActiveColor] = useState(links[0].color); // Initialize with first link's color
+	const [activeColor, setActiveColor] = useState(links[0].color);
+	const [activeImage, setActiveImage] = useState(links[0].image);
 
 	useEffect(() => {
 		setActiveColor(links.find((link) => link.id === openedId)?.color ?? activeColor);
@@ -73,23 +74,24 @@ export const ArtMenuRoadMap: React.FC<ArtMenuRoadMapProps> = () => {
 		<>
 			<div className={styles.artMenu}>
 				{links.map((link) => (
-					<ArtMenuRoadMapItem
+					<RoadMapArtMenuItem
 						key={link.id}
 						onClick={(event) => {
 							event.preventDefault();
 							setOpenedId(link.id !== openedId ? link.id : 0)
-							setActiveColor(link.color); // Update active color on click
+							setActiveColor(link.color);
+							setActiveImage(link.image);
 						}}
 						isOpened={link.id === openedId}
 						{...link}
-						color={link.id === openedId ? link.color : activeColor} // Apply active color
+						color={link.id === openedId ? link.color : activeColor}
 
 						openedId={openedId}
 					/>
 				))}
 			</div>
 			<Image
-				src={links.map((link) => link.image)[openedId - 1]}
+				src={activeImage}
 				alt={'roadMap'}
 				width="1000"
 				height="1000"
@@ -100,3 +102,4 @@ export const ArtMenuRoadMap: React.FC<ArtMenuRoadMapProps> = () => {
 		</>
 	);
 };
+

@@ -2,10 +2,10 @@ import Link from "next/link"
 
 import styles from './style.module.scss';
 import cl from 'classnames';
-import { Button, TypeArtButton } from "../Button";
+import { Button, TypeArtButton } from "../../../../components/Button";
 import Image from "next/image";
 
-interface ArtMenuItemProps {
+interface EarthArtMenuItemProps {
 	id: number
 	href: string
 	image: string
@@ -27,7 +27,7 @@ const getTypeById = (id: number): TypeArtButton => {
 	}
 }
 
-export const ArtMenuItem: React.FC<ArtMenuItemProps> = ({
+export const EarthArtMenuItem: React.FC<EarthArtMenuItemProps> = ({
 	id,
 	href,
 	image,
@@ -51,7 +51,7 @@ export const ArtMenuItem: React.FC<ArtMenuItemProps> = ({
 			)}>
 				<Button
 					type={getTypeById(id)}
-					onClick={() => {}}
+					onClick={() => { }}
 					className={styles.cardMoreButton}
 				>
 					More

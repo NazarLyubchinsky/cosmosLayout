@@ -167,3 +167,15 @@
   top: 0;
   max-height: 100%;
 }
+
+.buttonAngleLeft {
+  position: absolute;
+  top: 16px;
+  right: 6px;
+}
+
+.buttonAngleRight {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+}
