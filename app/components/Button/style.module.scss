@@ -109,10 +109,9 @@ $size-border: 2px;
 	}
 
 	&AngleRight {
-		
 		position: absolute;
-		bottom: 10px;
-		right: 4.5px;
+		bottom: 5px;
+		right: 5.5px;
 		width: 0;
 		height: 0;
 		z-index: 1;
@@ -124,15 +123,12 @@ $size-border: 2px;
 	&Type {
 		font-weight: bold;
 		color: var(--dark);
-		
 
 		.artButtonAngleLeft,
 		.artButtonAngleRight {
 			display: none;
 		}
 	}
-
-
 
 	// ArtMenuItem component
 	&BluePurple {
@@ -189,5 +185,24 @@ $size-border: 2px;
 		}
 		@include hover;
 	}
+}
 
+
+// blurredButton
+
+.blurredButton {
+	cursor: pointer;
+	width: 28.75rem;
+	height: 10.9375rem;
+	clip-path: polygon(22% 0, 29% 7%, 100% 7%, 100% 89%, 73% 89%, 65% 100%, 0 100%, 0 0);
+	background: linear-gradient(250deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%);
+	backdrop-filter: blur(6px);
+	border-color: unset;
+	border: unset;
+	padding: 0;
+	&Active {
+		background-color: #fff;
+		width: 31.25rem;
+		height: 11.875rem;
+	}
 }

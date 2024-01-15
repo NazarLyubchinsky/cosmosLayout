@@ -96,9 +96,8 @@ export const RoadMapArtMenu: React.FC<RoadMapArtMenuProps> = () => {
 				width="1000"
 				height="1000"
 				style={{ maxWidth: '100%', objectFit: 'cover', height: 'auto' }}
-				className={styles.sectionRoadMapBg}
+				className={styles.artMenuBg}
 			/>
-
 		</>
 	);
 };

@@ -1,116 +1,135 @@
-.artMenu {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 200px;
-  gap: 226px;
+.artButton {
+  border: none;
+  box-shadow: none;
+  font: 1.1429rem/1rem "NeueMachina", sans-serif;
+  background: none;
+  color: var(--light);
+  padding: 1.4286rem 1.7857rem 1.1429rem;
+  transition: all 0.3s;
+  cursor: pointer;
   position: relative;
-  top: 11.125rem;
+  height: 4rem;
 }
-.artMenu::after {
-  content: "";
-  position: absolute;
-  left: 19px;
-  top: 2px;
-  width: 4px;
-  bottom: 2px;
+.artButtonText {
+  position: relative;
+  z-index: 2;
+}
+.artButton:hover::after {
   background: var(--light);
-  z-index: 0;
 }
-.artMenuItem {
-  color: var(--light);
-  text-decoration: none;
-  display: block;
-  text-align: right;
-  font-size: 1.5714rem;
-  font-family: "TTOctosquares", sans-serif;
-  padding-left: 3.8rem;
-  position: relative;
-  z-index: 1;
+.artButton:hover .artButtonText {
+  color: var(--dark);
 }
-.artMenuItemTitle {
-  color: var(--light);
-  text-transform: uppercase;
-  transition: opacity 0.3s;
-  text-align: start;
+.artButton:hover .artButtonAngleLeft {
+  border-top-color: var(--dark);
 }
-.artMenuItemTitle:hover {
-  opacity: 0.8;
+.artButton:hover .artButtonAngleRight {
+  border-bottom-color: var(--dark);
 }
-.artMenuItemContent {
-  color: var(--light);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 1.875rem;
-  padding-right: 4rem;
-  text-align: start;
-}
-.artMenuItemContentActive {
-  color: var(--primary);
-}
-.artMenuItemContentTop {
-  font-family: "NeueMachina", sans-serif;
-  font-size: 2.5625rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-}
-.artMenuItemContentCenter {
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-}
-.artMenuItemContentBottom {
-  opacity: 0.95;
-  font-family: "Mazzard", sans-serif;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-}
-.artMenuItem:visited, .artMenuItem:hover {
-  color: var(--light);
-}
-.artMenuItem .artMenuDecorator {
-  background-image: url("./images/white_left_border.png");
-}
-.artMenuItem:hover .artMenuDecorator {
-  background-image: url("./images/color_left_border.png");
-}
-.artMenuItem:nth-child(odd) .artMenuDecorator {
-  background-image: url("./images/white_right_border.png");
-}
-.artMenuItem:nth-child(odd):hover .artMenuDecorator {
-  background-image: url("./images/color_right_border.png");
-}
-.artMenuItem:last-child .artMenuDecorator {
-  top: auto;
-  bottom: -4px;
-}
-.artMenuDecorator {
+.artButton::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   display: block;
-  width: 3rem;
-  height: 3.5rem;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  -webkit-clip-path: polygon(0 0.3571rem, calc(100% - 2.4286rem) 0.3571rem, calc(100% - 1.8571rem) 0, 100% 0, 100% 100%, 2.4286rem 100%, 1.8571rem calc(100% - 0.3571rem), 0 calc(100% - 0.3571rem), 0 calc(100% - 2px - 0.3571rem), calc(1.8571rem + 1px) calc(100% - 2px - 0.3571rem), calc(2.4286rem + 1px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 2px, calc(100% - 1.8571rem + 2px - 1px) 2px, calc(100% - 2.4286rem + 2px - 1px) calc(0.3571rem + 2px), 2px calc(0.3571rem + 2px), 2px calc(100% - 2px - 0.3571rem), 0 calc(100% - 2px - 0.3571rem));
+          clip-path: polygon(0 0.3571rem, calc(100% - 2.4286rem) 0.3571rem, calc(100% - 1.8571rem) 0, 100% 0, 100% 100%, 2.4286rem 100%, 1.8571rem calc(100% - 0.3571rem), 0 calc(100% - 0.3571rem), 0 calc(100% - 2px - 0.3571rem), calc(1.8571rem + 1px) calc(100% - 2px - 0.3571rem), calc(2.4286rem + 1px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 2px, calc(100% - 1.8571rem + 2px - 1px) 2px, calc(100% - 2.4286rem + 2px - 1px) calc(0.3571rem + 2px), 2px calc(0.3571rem + 2px), 2px calc(100% - 2px - 0.3571rem), 0 calc(100% - 2px - 0.3571rem));
+  background: var(--light);
 }
-.artMenuItemActive .artMenuItemTitle {
-  color: var(--primary);
+.artButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: 0;
+  transition: all 0.3s;
+  -webkit-clip-path: polygon(0 0.3571rem, calc(100% - 2.4286rem) 0.3571rem, calc(100% - 1.8571rem) 0, 100% 0, 100% 100%, 2.4286rem 100%, 1.8571rem calc(100% - 0.3571rem), 0 calc(100% - 0.3571rem));
+          clip-path: polygon(0 0.3571rem, calc(100% - 2.4286rem) 0.3571rem, calc(100% - 1.8571rem) 0, 100% 0, 100% 100%, 2.4286rem 100%, 1.8571rem calc(100% - 0.3571rem), 0 calc(100% - 0.3571rem));
 }
-.artMenuItemActive .artMenuDecorator {
-  background-image: url("./images/color_left_border.png");
+.artButtonAngleLeft {
+  position: absolute;
+  top: 10px;
+  left: 4.5px;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  border-top: 10px solid var(--light);
+  border-right: 10px solid transparent;
+  transition: all 0.3s;
 }
-.artMenuItemActive .artMenuDecorator:nth-child(odd) {
-  background-image: url("./images/color_right_border.png");
+.artButtonAngleRight {
+  position: absolute;
+  bottom: 10px;
+  right: 4.5px;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  border-bottom: 10px solid var(--light);
+  border-left: 10px solid transparent;
+  transition: all 0.3s;
 }
-.artMenuItemActive .artMenuCard {
-  opacity: 1;
-  height: 13.3571rem;
+.artButtonType {
+  font-weight: bold;
+  color: var(--dark);
+}
+.artButtonType .artButtonAngleLeft,
+.artButtonType .artButtonAngleRight {
+  display: none;
+}
+.artButtonBluePurple {
+  transition: all 0.3s;
+}
+.artButtonBluePurple::after {
+  background: linear-gradient(to right, #89dcd5 0%, #9d65bf 100%) !important;
+}
+.artButtonBluePurple::before {
+  background: linear-gradient(135deg, #e4f8f7 0%, #beebe8 19%, #a66bc3 79%, #caaddd 100%) !important;
+}
+.artButtonBluePurple:hover {
+  opacity: 0.8;
+}
+.artButtonBlue {
+  transition: all 0.3s;
+}
+.artButtonBlue::after {
+  background: linear-gradient(to right, #89dcd5 0%, #7cb1bb 100%) !important;
+}
+.artButtonBlue::before {
+  background: linear-gradient(135deg, #e1effe 0%, #b5d6f9 21%, #85b8c0 79%, #b9d6db 100%) !important;
+}
+.artButtonBlue:hover {
+  opacity: 0.8;
+}
+.artButtonGreenYellow {
+  transition: all 0.3s;
+}
+.artButtonGreenYellow::after {
+  background: linear-gradient(to right, #a9f0f4 0%, #eedd75 100%) !important;
+}
+.artButtonGreenYellow::before {
+  background: linear-gradient(135deg, #ecfbfe 0%, #d0f7f8 20%, #f2de7b 79%, #f5ecb3 100%) !important;
+}
+.artButtonGreenYellow:hover {
+  opacity: 0.8;
+}
+.artButtonYellowPink {
+  transition: all 0.3s;
+}
+.artButtonYellowPink::after {
+  background: linear-gradient(to right, #f4bb42 0%, #f5bdc4 100%) !important;
+}
+.artButtonYellowPink::before {
+  background: linear-gradient(135deg, #f9db88 0%, #fdf2d1 22%, #fdf2d1 22%, #f5c2c8 79%, #f8dbde 100%) !important;
+}
+.artButtonYellowPink:hover {
+  opacity: 0.8;
 }
 
 .cardMore {
@@ -137,45 +156,4 @@
 }
 .cardMoreImage {
   display: block;
-}
-
-.button {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
-
-.ellipsesIcon {
-  position: absolute;
-  top: 0;
-}
-
-.ellipsesIcon2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.sectionRoadMapBg {
-  position: absolute;
-  right: 0;
-  top: 0;
-  max-height: 100%;
-}
-
-.buttonAngleLeft {
-  position: absolute;
-  top: 16px;
-  right: 6px;
-}
-
-.buttonAngleRight {
-  position: absolute;
-  bottom: 4px;
-  left: 4px;
 }

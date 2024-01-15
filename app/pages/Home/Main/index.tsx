@@ -9,11 +9,11 @@ import { Title } from '@/app/components/Title';
 import { ReactNode } from 'react';
 interface ArtMenuProps {
 	children?: ReactNode
-	isActiveid:string
+	isActiveid: string
 }
 export const Main
 	: React.FC<ArtMenuProps>
-	= ({children, isActiveid}) => {
+	= ({ children, isActiveid }) => {
 		return (
 			<section className={cl(styles.section, styles.sectionMain)} id={isActiveid} >
 				<header
@@ -23,6 +23,7 @@ export const Main
 					<Logo />
 					<SocialNetworks />
 					<Button
+						kind='Button'
 						onClick={() => { }}
 					>
 						Whitepaper
@@ -37,6 +38,8 @@ export const Main
 					<ul className={styles.buttonList}>
 						<li>
 							<Button
+								kind='Button'
+
 								onClick={() => { }}
 							>
 								Mint
@@ -44,6 +47,8 @@ export const Main
 						</li>
 						<li>
 							<Button
+								kind='Button'
+
 								onClick={() => { }}
 							>
 								Connect Wallet

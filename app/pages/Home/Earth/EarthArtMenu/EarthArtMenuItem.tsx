@@ -50,6 +50,7 @@ export const EarthArtMenuItem: React.FC<EarthArtMenuItemProps> = ({
 				styles.artMenuCard
 			)}>
 				<Button
+					kind='Button'
 					type={getTypeById(id)}
 					onClick={() => { }}
 					className={styles.cardMoreButton}

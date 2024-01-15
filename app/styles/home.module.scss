@@ -15,15 +15,16 @@
 
 	&Main,
 	&Earth,
-	&RoadMap {
+	&RoadMap,
+	&Collaborations {
 		background-size: cover;
 		display: flex;
 		align-items: center;
 		padding-top: 7.1429rem;
 		padding-bottom: 7.1429rem;
 	}
-	&RoadMap {
-		padding-bottom: 260px;
+	&RoadMap,
+	&Collaborations {
 		height: 100%;
 		position: relative;
 		background: linear-gradient(to bottom, #1e202c 0%, #13151b 100%);
@@ -41,21 +42,47 @@
 			z-index: 0;
 			background: linear-gradient(to bottom, rgba(30, 32, 44, 0) 0%, rgba(30, 32, 44, 1) 100%);
 		}
-
-	
 		.subTitle {
 			position: relative;
 			display: inline;
 			&Text {
 				position: absolute;
-				right: 10px;
-				top: -14px;
 				color: #ffb800;
 				font-size: 15px;
 				font-family: Mazzar;
 				font-weight: 700;
 				word-wrap: break-word;
 			}
+		}
+	}
+	&RoadMap {
+		padding-bottom: 260px;
+		.subTitle {
+			&Text {
+				right: 10px;
+				top: -14px;
+			}
+		}
+	}
+	&Collaborations {
+		align-items: center;
+		// .subTitle {
+		// 	display: flex;
+		// 	justify-content: center;
+		// 	margin-bottom: 2.125rem;
+		// 	&Text {
+		// 		right: 20px;
+		// 		top: -20px;
+		// 	}
+		// }
+		&Container {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+			margin-top: 3.75rem;
+			display: flex;
+			gap: 50px;
 		}
 	}
 }

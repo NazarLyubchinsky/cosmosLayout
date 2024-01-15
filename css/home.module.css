@@ -11,22 +11,21 @@
   background: url("/bg/earth_2_bg.jpg") center no-repeat no-repeat;
   justify-content: space-between;
 }
-.sectionMain, .sectionEarth, .sectionRoadMap {
+.sectionMain, .sectionEarth, .sectionRoadMap, .sectionCollaborations {
   background-size: cover;
   display: flex;
   align-items: center;
   padding-top: 7.1429rem;
   padding-bottom: 7.1429rem;
 }
-.sectionRoadMap {
-  padding-bottom: 260px;
+.sectionRoadMap, .sectionCollaborations {
   height: 100%;
   position: relative;
   background: linear-gradient(to bottom, #1e202c 0%, #13151b 100%);
   align-items: start;
   flex-direction: column;
 }
-.sectionRoadMap::before {
+.sectionRoadMap::before, .sectionCollaborations::before {
   content: "";
   height: 170px;
   width: 100%;
@@ -37,19 +36,44 @@
   z-index: 0;
   background: linear-gradient(to bottom, rgba(30, 32, 44, 0) 0%, rgb(30, 32, 44) 100%);
 }
-.sectionRoadMap .subTitle {
+.sectionRoadMap .subTitle, .sectionCollaborations .subTitle {
   position: relative;
   display: inline;
 }
-.sectionRoadMap .subTitleText {
+.sectionRoadMap .subTitleText, .sectionCollaborations .subTitleText {
   position: absolute;
-  right: 10px;
-  top: -14px;
   color: #ffb800;
   font-size: 15px;
   font-family: Mazzar;
   font-weight: 700;
   word-wrap: break-word;
+}
+.sectionRoadMap {
+  padding-bottom: 260px;
+}
+.sectionRoadMap .subTitleText {
+  right: 10px;
+  top: -14px;
+}
+.sectionCollaborations {
+  align-items: center;
+}
+.sectionCollaborations .subTitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.125rem;
+}
+.sectionCollaborations .subTitleText {
+  right: 20px;
+  top: -20px;
+}
+.sectionCollaborationsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3.75rem;
+  display: flex;
+  gap: 50px;
 }
 
 .header {
