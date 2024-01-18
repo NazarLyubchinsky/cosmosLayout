@@ -10,7 +10,7 @@ export const Faq: React.FC<FaqProps> = ({
 
 }) => {
 	return (
-		<div className={styles.sectionFaq}>
+		<section className={styles.sectionFaq}>
 			<TitleWithImage
 				svg={<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
 					<g clip-path="url(#clip0_0_620)">
@@ -25,6 +25,6 @@ export const Faq: React.FC<FaqProps> = ({
 				title='HAVE ANY QUESTIONS?' subtitle="FAQ" />
 
 			<FaqContent />
-		</div>
+		</section>
 	)
 }
