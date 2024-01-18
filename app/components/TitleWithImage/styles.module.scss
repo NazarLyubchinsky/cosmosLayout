@@ -1,16 +1,24 @@
 .subTitle {
 	position: relative;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 	margin-bottom: 2.125rem;
 	&Text {
-		position: absolute;
-		right: 20px;
-		top: -20px;
+		// position: absolute;
+		// left: 30px;
+		// top: -23px;
 		color: #ffb800;
 		font-size: 15px;
 		font-family: Mazzar;
 		font-weight: 700;
 		word-wrap: break-word;
+	}
+}
+.BlockSvg{
+	display: flex;
+	justify-content: center;
+	:last-child{
+		margin-left: 20px;
 	}
 }

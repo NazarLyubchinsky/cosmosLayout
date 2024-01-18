@@ -3,6 +3,7 @@ import styles from '../../../styles/home.module.scss'
 
 import { Title } from '@/app/components/Title';
 import { RoadMapArtMenu } from './RoadMapArtMenu';
+import { ImagesSubtitle } from '@/app/components/TitleWithImage';
 interface ArtMenuProps {
 	isActiveid: string
 }
@@ -11,9 +12,8 @@ export const RoadMap
 	= ({ isActiveid }) => {
 		return (
 			<section className={cl(styles.section, styles.sectionRoadMap)} id={isActiveid}>
-				<div>
-					<div className={styles.subTitle}>
-						<span className={styles.subTitleText}>OUR WAY</span>
+				<div className={styles.sectionRoadMapText}>
+					<ImagesSubtitle subtitle='OUR WAY'>
 						<svg xmlns="http://www.w3.org/2000/svg" width="160" height="12" viewBox="0 0 160 12" fill="none">
 							<path d="M159.5 1L149.5 6.5H75.5L66.5 11H57L50 6.5H25M0 6.5H17" stroke="url(#paint0_linear_0_469)" stroke-width="1.5" />
 							<defs>
@@ -23,7 +23,7 @@ export const RoadMap
 								</linearGradient>
 							</defs>
 						</svg>
-					</div>
+					</ImagesSubtitle>
 
 					<Title size="Small" >
 						<span>ROAD</span>

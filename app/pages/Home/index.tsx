@@ -2,6 +2,7 @@ import { Collaborations } from "./Collaborations"
 import { Earth } from "./Earth"
 import { Main } from "./Main"
 import { RoadMap } from "./RoadMap"
+import { Faq } from "./FAQ"
 
 
 export const HomePage = ({
@@ -15,6 +16,7 @@ export const HomePage = ({
 
 			<RoadMap isActiveid='roadmap' />
 			<Collaborations />
+			<Faq />
 		</>
 
 	)
