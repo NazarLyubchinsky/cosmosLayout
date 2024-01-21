@@ -1,6 +1,7 @@
 import cl from 'classnames';
 
-import styles from '../../../styles/home.module.scss'
+import styles from "../home.module.scss"
+
 import { Logo } from '@/app/components/Logo';
 import { SocialNetworks } from '@/app/components/SocialNetworks';
 import { Button } from '@/app/components/Button';

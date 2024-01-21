@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import cl from 'classnames';
-
-import { Fragment, ReactNode, useContext } from 'react';
+import { Fragment, ReactNode, useCallback, useContext, useEffect, useState } from 'react';
 import styles from './style.module.scss';
-import { ActiveLinkContext } from '@/app/page';
+import { CustomContext } from '@/app/context';
+
 const links = [
 	{
 		id: 1,
@@ -22,52 +22,80 @@ const links = [
 		title: 'Roadmap',
 		href: '#roadmap',
 		active: false,
-	}
+	},
+	{
+		id: 4,
+		title: 'Collaborations',
+		href: '#collaborations',
+		active: false,
+	},
+	{
+		id: 5,
+		title: 'FAQ',
+		href: '#faq',
+		active: false,
+	},
 ];
 
 interface NavigationProps {
 	children?: ReactNode,
 }
 
-
 export const Navigation: React.FC<NavigationProps> = ({ children }) => {
+	const { activeLinkId, setActiveLinkId } = useContext(CustomContext);
+	const [centerIndex, setCenterIndex] = useState(1);
 
-	const { activeLinkId, setActiveLinkId } = useContext(ActiveLinkContext);
+	const visibleLinks = links.slice(centerIndex - 1, centerIndex + 2);
 
-	const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
-		e.preventDefault();
-		const targetId = e.currentTarget.href.replace(/.*\#/, '');
-		if (targetId !== activeLinkId) {
-			setActiveLinkId(targetId);
+	const handleScroll = useCallback(() => {
+		const scrollPosition = window.scrollY;
+
+		const visibleSection = links.find((link) => {
+			const targetElem = document.getElementById(link.href.replace(/.*\#/, ''));
+			if (targetElem) {
+				const offsetTop = targetElem.offsetTop - 1;
+				const offsetBottom = offsetTop + targetElem.offsetHeight;
+
+				return scrollPosition >= offsetTop && scrollPosition < offsetBottom;
+			}
+			return false;
+		});
+
+		const activeSection = visibleSection || links[0];
+
+		if (activeSection && activeLinkId !== activeSection.href.replace(/.*\#/, '')) {
+			setActiveLinkId(activeSection.href.replace(/.*\#/, ''));
+			if (links.indexOf(activeSection) > 0 && links.indexOf(activeSection) < links.length - 1) {
+				setCenterIndex(links.indexOf(activeSection));
+			}
 		}
+	}, [activeLinkId, setActiveLinkId]);
 
-		localStorage.setItem('activeLinkId', targetId);
-		const elem = document.getElementById(targetId);
-		elem?.scrollIntoView({ behavior: 'smooth' });
-	};
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, [handleScroll]);
 	return (
 		<>
 			<nav className={styles.navigation}>
-				{links.map((link, id) => (
+				{visibleLinks.map((link, id) => (
 					<Fragment key={link.id}>
 						<Link
-							onClick={handleScroll}
 							href={link.href}
 							className={cl(
 								styles.navigationLink,
 								activeLinkId === link.href.replace(/.*\#/, '') && styles.navigationLinkActive
 							)}
 						>
-
 							{link.title}
 							{children}
 						</Link>
-						{id < links.length - 1 && (
-							<span className={styles.navigationStar} />
-						)}
+						{id < visibleLinks.length - 1 && <span className={styles.navigationStar} />}
 					</Fragment>
 				))}
-			</nav>
+			</nav >
 		</>
 	);
-}
+};		

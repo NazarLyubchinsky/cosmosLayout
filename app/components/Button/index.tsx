@@ -2,7 +2,7 @@
 import { ReactNode } from 'react';
 import styles from './style.module.scss';
 import cl from 'classnames';
-import { ButtonAngleLeft, ButtonAngleRight } from '@/app/pages/Home/RoadMap/RoadMapArtMenu/RoadMapArtMenuItem';
+import { ButtonAngleLeft, ButtonAngleRight } from './ButtonAngle';
 
 export type TypeArtButton = 'BluePurple' | 'GreenYellow' | 'Blue' | 'YellowPink';
 export type ButtonKind = 'Button' | 'ButtonRotate';

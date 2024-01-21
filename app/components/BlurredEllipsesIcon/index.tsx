@@ -12,13 +12,13 @@ export const CreateBlurredEllipsesIcon: React.FC<{ className?: string; color: st
 				<ellipse cx="92.0395" cy="58.0804" rx="92.0395" ry="58.0804" transform="matrix(-0.921631 -0.388068 0.435532 -0.900173 278.093 111)" fill={color} />
 			</g>
 			<defs>
-				<filter id="filter0_f_0_475" x="-15.4831" y="-141.483" width="356.966" height="314.966" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-					<feFlood flood-opacity="0" result="BackgroundImageFix" />
+				<filter id="filter0_f_0_475" x="-15.4831" y="-141.483" width="356.966" height="314.966" filterUnits="userSpaceOnUse" >
+					<feFlood floodOpacity="0" result="BackgroundImageFix" />
 					<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
 					<feGaussianBlur stdDeviation="50.2416" result="effect1_foregroundBlur_0_475" />
 				</filter>
-				<filter id="filter1_f_0_475" x="26.5257" y="-143.82" width="384.073" height="333.64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-					<feFlood flood-opacity="0" result="BackgroundImageFix" />
+				<filter id="filter1_f_0_475" x="26.5257" y="-143.82" width="384.073" height="333.64" filterUnits="userSpaceOnUse" >
+					<feFlood floodOpacity="0" result="BackgroundImageFix" />
 					<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
 					<feGaussianBlur stdDeviation="51.7478" result="effect1_foregroundBlur_0_475" />
 				</filter>
@@ -56,13 +56,13 @@ export const CreateBlurredEllipsesIcon2: React.FC<{ className?: string; id: numb
 				/>
 			</g>
 			<defs>
-				<filter id="filter0_f_0_486" x="-73.7222" y="-25.2598" width="421.241" height="387.795" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-					<feFlood flood-opacity="0" result="BackgroundImageFix" />
+				<filter id="filter0_f_0_486" x="-73.7222" y="-25.2598" width="421.241" height="387.795" filterUnits="userSpaceOnUse" >
+					<feFlood floodOpacity="0" result="BackgroundImageFix" />
 					<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
 					<feGaussianBlur stdDeviation="65.3611" result="effect1_foregroundBlur_0_486" />
 				</filter>
-				<filter id="filter1_f_0_486" x="-31.8272" y="-43.4644" width="451.224" height="408.768" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-					<feFlood flood-opacity="0" result="BackgroundImageFix" />
+				<filter id="filter1_f_0_486" x="-31.8272" y="-43.4644" width="451.224" height="408.768" filterUnits="userSpaceOnUse" >
+					<feFlood floodOpacity="0" result="BackgroundImageFix" />
 					<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
 					<feGaussianBlur stdDeviation="67.3206" result="effect1_foregroundBlur_0_486" />
 				</filter>

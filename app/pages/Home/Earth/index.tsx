@@ -1,5 +1,5 @@
 import cl from 'classnames'
-import styles from "@/css/home.module.css"
+import styles from "../home.module.scss"
 
 import { Title } from "@/app/components/Title"
 import { EarthArtMenu } from './EarthArtMenu'

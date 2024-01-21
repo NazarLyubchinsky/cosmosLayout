@@ -3,11 +3,14 @@ import { Earth } from "./Earth"
 import { Main } from "./Main"
 import { RoadMap } from "./RoadMap"
 import { Faq } from "./FAQ"
+import { Teams } from "./Teams"
+
 
 
 export const HomePage = ({
 
 }) => {
+
 	return (
 		<>
 			<Main isActiveid='home' />
@@ -15,9 +18,14 @@ export const HomePage = ({
 			<Earth isActiveid='factions' />
 
 			<RoadMap isActiveid='roadmap' />
-			<Collaborations />
-			<Faq />
+			<Collaborations isActiveid='collaborations' />
+			<Faq isActiveid='faq' />
+
+
+			{/* <Teams /> */}
+
 		</>
 
 	)
 }
+
