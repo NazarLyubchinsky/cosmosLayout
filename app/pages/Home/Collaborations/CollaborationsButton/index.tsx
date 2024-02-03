@@ -6,11 +6,11 @@ import { Button } from '@/app/components/Button';
 interface CollaborationsButtonProps {
 	children: React.ReactNode
 }
-export const CollaborationsButton: React.FC<CollaborationsButtonProps> = ({ children }) => {
+export const CollaborationsButton = ({ children }: CollaborationsButtonProps) => {
 	return (
 		<Button
-			kind='ButtonRotate'
 			className={cl(styles.cardMoreButton)}
+			kind='ButtonRotate'
 		>
 			{children}
 		</Button>

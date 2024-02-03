@@ -38,7 +38,7 @@ const links = [
 	}
 ];
 
-export const EarthArtMenu: React.FC<EarthArtMenuProps> = () => {
+export const EarthArtMenu = ({ }: EarthArtMenuProps) => {
 	const [openedId, setOpenedId] = useState(1);
 	return (
 		<div className={styles.artMenu}>

@@ -30,7 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
 		kind === 'Button' && type && styles.artButtonType,
 		kind === 'Button' && type && styles[`artButton${type}`],
 		kind === 'ButtonRotate' && styles.blurredButton,
-		kind === 'ButtonRotate' && isOpened && styles.blurredButtonActive
+		kind === 'ButtonRotate' && isOpened && styles.blurredButtonActive,
 	);
 
 	return (

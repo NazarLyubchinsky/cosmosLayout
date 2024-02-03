@@ -7,13 +7,11 @@ interface FaqContentProps {
 
 }
 
-export const FaqContent: React.FC<FaqContentProps> = ({
+export const FaqContent = ({
 
-}) => {
+}: FaqContentProps) => {
 	return (
-		<Button className={styles.faqContent} kind="ButtonRotate">
-
-
+		<Button kind="ButtonRotate" className={styles.faqContent}>
 			<div className={styles.faqContentLeft}>
 				<div className={styles.faqContentLeftTop}>
 					<p className={styles.title}>How many?</p>

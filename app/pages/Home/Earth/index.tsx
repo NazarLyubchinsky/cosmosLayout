@@ -9,15 +9,9 @@ interface EarthProps {
 	isActiveid: string
 }
 
-export const Earth: React.FC<EarthProps> = ({
-	isActiveid,
-
-}) => {
-
+export const Earth = ({ isActiveid }: EarthProps) => {
 	return (
-		<section className={cl(styles.section, styles.sectionEarth)}
-			id={isActiveid}
-		>
+		<section className={cl(styles.section, styles.sectionEarth)} id={isActiveid}>
 			<Title size="Large">
 				Factions
 			</Title>

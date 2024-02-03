@@ -8,56 +8,48 @@ import { Button } from '@/app/components/Button';
 import { Navigation } from '@/app/components/Navigation';
 import { Title } from '@/app/components/Title';
 import { ReactNode } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Header } from '@/app/components/Header';
 interface ArtMenuProps {
 	children?: ReactNode
 	isActiveid: string
 }
-export const Main
-	: React.FC<ArtMenuProps>
-	= ({ children, isActiveid }) => {
-		return (
-			<section className={cl(styles.section, styles.sectionMain)} id={isActiveid} >
-				<header
-					className={styles.header}
-					style={{ color: 'black' }}
-				>
-					<Logo />
-					<SocialNetworks />
-					<Button
-						kind='Button'
-						onClick={() => { }}
-					>
-						Whitepaper
-					</Button>
-				</header>
-				<Navigation />
+export const Main = ({ children, isActiveid }: ArtMenuProps) => {
+	return (
+		<section className={cl(styles.section, styles.sectionMain)} id={isActiveid} >
 
-				<div>
-					<Title>
-						From dust to&nbsp;dawn
-					</Title>
-					<ul className={styles.buttonList}>
-						<li>
+			<Header />
+
+			<Navigation />
+
+			<div>
+				<Title>
+					From dust to&nbsp;dawn
+				</Title>
+				<ul className={styles.buttonList}>
+					<li>
+						<Link href={'#collaborations'}>
 							<Button
 								kind='Button'
-
-								onClick={() => { }}
 							>
-								Mint
+								Collaborations
 							</Button>
-						</li>
-						<li>
+						</Link>
+
+					</li>
+					<li>
+						<Link href={'/pages/shop'}>
 							<Button
 								kind='Button'
-
-								onClick={() => { }}
 							>
-								Connect Wallet
+								Go to shop
 							</Button>
-						</li>
-					</ul>
-				</div>
-				{children}
-			</section >
-		);
-	}
+						</Link>
+					</li>
+				</ul>
+			</div>
+			{children}
+		</section >
+	);
+}

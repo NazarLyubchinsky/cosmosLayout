@@ -61,7 +61,7 @@ const links = [
 ];
 
 
-export const RoadMapArtMenu: React.FC<RoadMapArtMenuProps> = () => {
+export const RoadMapArtMenu = ({ }: RoadMapArtMenuProps) => {
 	const [openedId, setOpenedId] = useState(1);
 	const [activeColor, setActiveColor] = useState(links[0].color);
 	const [activeImage, setActiveImage] = useState(links[0].image);

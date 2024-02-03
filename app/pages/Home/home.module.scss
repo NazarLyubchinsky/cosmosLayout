@@ -3,6 +3,7 @@
 	padding: 2.1429rem 6.8571rem;
 	box-sizing: border-box;
 	min-height: 600px;
+	
 
 	&Main {
 		background: url("/bg/screen_1_bg.jpg") center no-repeat no-repeat;
@@ -116,18 +117,6 @@
 			background: linear-gradient(to bottom, rgba(30, 32, 44, 0) 10%, #3d4151 100%);
 		}
 	}
-}
-
-.header {
-	display: grid;
-	grid-template-columns: 1fr auto auto;
-	align-items: center;
-	gap: 2.2857rem;
-	position: absolute;
-	top: 2.2rem;
-	left: 2.8571rem;
-	right: 2.8571rem;
-	z-index: 9;
 }
 
 .buttonList {

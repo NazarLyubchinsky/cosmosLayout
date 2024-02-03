@@ -7,9 +7,9 @@ interface FaqProps {
 
 }
 
-export const Faq: React.FC<FaqProps> = ({
+export const Faq = ({
 	isActiveid
-}) => {
+}: FaqProps) => {
 	return (
 		<section className={styles.sectionFaq} id={isActiveid}>
 			<TitleWithImage

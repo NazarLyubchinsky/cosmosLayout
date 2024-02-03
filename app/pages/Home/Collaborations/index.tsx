@@ -7,7 +7,7 @@ interface CollaborationsProps {
 	isActiveid: string
 }
 
-export const Collaborations: React.FC<CollaborationsProps> = ({ isActiveid }) => {
+export const Collaborations = ({ isActiveid }: CollaborationsProps) => {
 	return (
 		<section className={styles.sectionCollaborations} id={isActiveid}>
 			<TitleWithImage title='COLLABORATIONS' subtitle='PARTNERS' />

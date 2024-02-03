@@ -9,10 +9,17 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode
 }) {
+	const seo = {
+		title: 'Dusktopia ☄️',
+		description: 'cosmos layout ☄️'
+	};
 	return (
 		<html lang="en">
+			<title>{seo.title}</title>
+			<meta name='description' content={seo.description} />
 			<body
 			>{children}</body>
 		</html>
 	)
 }
+

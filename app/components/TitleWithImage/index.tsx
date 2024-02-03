@@ -16,10 +16,10 @@ interface ImagesSubtitleProps {
 }
 
 // ImagesSubtitle
-export const ImagesSubtitle: React.FC<ImagesSubtitleProps> = ({
+export const ImagesSubtitle = ({
 	subtitle,
 	children
-}) => {
+}: ImagesSubtitleProps) => {
 	return (
 		<div className={styles.subTitle} >
 			<span className={styles.subTitleText}>{subtitle}</span>
@@ -28,11 +28,11 @@ export const ImagesSubtitle: React.FC<ImagesSubtitleProps> = ({
 }
 
 // TitleWithImage
-export const TitleWithImage: React.FC<TitleWithImageProps> = ({
+export const TitleWithImage = ({
 	subtitle,
 	title,
 	svg
-}) => {
+}: TitleWithImageProps) => {
 	const parts = title.split(" ");
 	return (
 		<>

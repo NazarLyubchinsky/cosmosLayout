@@ -34,12 +34,12 @@
 		position: relative;
 		z-index: 1;
 
-&Title{
-	transition: opacity .3s;
-	&:hover{
-		opacity: 0.8;
-	}
-}
+		&Title {
+			transition: opacity 0.3s;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
 
 		&:visited,
 		&:hover {
@@ -109,13 +109,13 @@
 }
 
 .cardMore {
-	position: relative;
-	padding-left: 2.5rem;
+	position: relative !important;
+	padding-left: 2.5rem !important;
 
 	&Button {
-		left: 0;
-		top: 10%;
-		position: absolute;
+		left: 0 !important;
+		top: 10% !important;
+		position: absolute !important;
 	}
 
 	&Image {

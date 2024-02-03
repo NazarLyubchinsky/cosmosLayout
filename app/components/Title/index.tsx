@@ -9,10 +9,10 @@ interface TitleProps {
 	children: ReactNode,
 }
 
-export const Title: React.FC<TitleProps> = ({
+export const Title = ({
 	size = 'Medium',
 	children,
-}) => {
+}: TitleProps) => {
 	return (
 		<h2 className={cl(styles.title, styles[`title${size}`])}>
 			{children}
