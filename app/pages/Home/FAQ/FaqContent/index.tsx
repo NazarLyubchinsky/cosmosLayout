@@ -1,7 +1,7 @@
 
 
+import { Button } from '@/src/components/Button'
 import styles from './styles.module.scss'
-import { Button } from "@/app/components/Button"
 
 interface FaqContentProps {
 

@@ -1,7 +1,7 @@
 
 import cl from 'classnames';
 import styles from './styles.module.scss'
-import { Button } from '@/app/components/Button';
+import { Button } from '@/src/components/Button';
 
 interface CollaborationsButtonProps {
 	children: React.ReactNode

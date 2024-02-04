@@ -2,11 +2,11 @@ import cl from 'classnames';
 
 import styles from "../home.module.scss"
 
-import { Button } from '@/app/components/Button';
-import { Navigation } from '@/app/components/Navigation';
-import { Title } from '@/app/components/Title';
 import { ReactNode } from 'react';
 import Link from 'next/link';
+import { Button } from '@/src/components/Button';
+import { Navigation } from '@/src/components/Navigation';
+import { Title } from '@/src/components/Title';
 interface ArtMenuProps {
 	children?: ReactNode
 	isActiveid: string

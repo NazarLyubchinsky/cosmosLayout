@@ -1,4 +1,4 @@
-import { TitleWithImage } from "@/app/components/TitleWithImage"
+import { TitleWithImage } from "@/src/components/TitleWithImage"
 import styles from "../home.module.scss"
 import { FaqContent } from "./FaqContent"
 

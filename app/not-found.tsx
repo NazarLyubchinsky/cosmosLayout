@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/notFound.scss'
+import '../src/styles/notFound.scss'
 
 export default function NotFound() {
 

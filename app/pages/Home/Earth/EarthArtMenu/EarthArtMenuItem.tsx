@@ -2,8 +2,8 @@ import Link from "next/link"
 
 import styles from './style.module.scss';
 import cl from 'classnames';
-import { Button, TypeArtButton } from "../../../../components/Button";
 import Image from "next/image";
+import { Button, TypeArtButton } from "@/src/components/Button";
 
 interface EarthArtMenuItemProps {
 	id: number

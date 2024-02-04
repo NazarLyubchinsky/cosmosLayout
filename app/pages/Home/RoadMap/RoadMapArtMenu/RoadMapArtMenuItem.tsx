@@ -3,8 +3,8 @@ import Link from "next/link"
 import styles from './style.module.scss';
 import cl from 'classnames';
 import React from "react";
-import { Button } from "@/app/components/Button";
-import { CreateBlurredEllipsesIcon, CreateBlurredEllipsesIcon2 } from "@/app/components/BlurredEllipsesIcon";
+import { CreateBlurredEllipsesIcon, CreateBlurredEllipsesIcon2 } from "@/src/components/BlurredEllipsesIcon";
+import { Button } from "@/src/components/Button";
 export type TypeArtButton = 'Pink' | 'LightBlue' | 'LightBluePurple' | 'Blue' | 'Purple';
 
 interface RoadMapArtMenuItemProps {

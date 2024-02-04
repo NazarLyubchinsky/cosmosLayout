@@ -4,7 +4,6 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
 import s from "./styles.module.scss";
-import Link from "next/link";
 import { Logo } from "../Logo";
 
 

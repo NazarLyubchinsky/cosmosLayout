@@ -1,6 +1,6 @@
 'use client'
 
-import useAOS from "@/app/hooks/useAos"
+import useAOS from "@/src/hooks/useAos"
 import { Button } from "../Button"
 import { Logo } from "../Logo"
 import { SocialNetworks } from "../SocialNetworks"
@@ -11,10 +11,10 @@ export const Header = () => {
 	const { aosRef } = useAOS();
 
 	return (
-		<header 
-		ref={aosRef}
-		data-aos="fade-down"
-		className={styles.header}
+		<header
+			ref={aosRef}
+			data-aos="fade-down"
+			className={styles.header}
 			style={{ color: 'black' }}
 		>
 			<Logo />

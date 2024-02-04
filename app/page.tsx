@@ -1,7 +1,7 @@
 "use client"
 
 import { HomePage } from './pages/Home';
-import { ContextProvider } from './context/ContextProvider';
+import { ContextProvider } from '../src/context/ContextProvider';
 
 
 

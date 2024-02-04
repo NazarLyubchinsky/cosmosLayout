@@ -1,8 +1,8 @@
 import cl from 'classnames'
 import styles from "../home.module.scss"
 
-import { Title } from "@/app/components/Title"
 import { EarthArtMenu } from './EarthArtMenu'
+import { Title } from '@/src/components/Title'
 
 
 interface EarthProps {

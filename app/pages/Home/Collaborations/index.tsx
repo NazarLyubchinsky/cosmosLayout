@@ -1,8 +1,8 @@
 
-import useAOS from '@/app/hooks/useAos'
+import useAOS from '@/src/hooks/useAos'
 import styles from '../home.module.scss'
 import { CollaborationsButton } from './CollaborationsButton'
-import { TitleWithImage } from '@/app/components/TitleWithImage'
+import { TitleWithImage } from '@/src/components/TitleWithImage'
 
 interface CollaborationsProps {
 	isActiveid: string

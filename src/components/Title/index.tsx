@@ -1,9 +1,8 @@
-import Link from 'next/link';
 import React, { ReactNode } from 'react';
 import cl from 'classnames';
 
 import styles from './style.module.scss';
-import useAOS from '@/app/hooks/useAos';
+import useAOS from '@/src/hooks/useAos';
 
 interface TitleProps {
 	size?: 'Medium' | 'Large' | 'Small',
@@ -18,8 +17,8 @@ export const Title = ({
 
 	return (
 		<h2
-		//  ref={aosRef}
-		 data-aos="fade-right"
+			//  ref={aosRef}
+			data-aos="fade-right"
 			className={cl(styles.title, styles[`title${size}`])}>
 			{children}
 		</h2>

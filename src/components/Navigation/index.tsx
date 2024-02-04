@@ -4,8 +4,7 @@ import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 
 import styles from './style.module.scss';
 
-import { useTodoContext } from '@/app/context/useTodoContext';
-import useAOS from '@/app/hooks/useAos';
+import { useTodoContext } from '@/src/context/useTodoContext';
 
 
 const links = [
@@ -92,8 +91,8 @@ export const Navigation: React.FC<NavigationProps> = () => {
 
 	return (
 		<>
-			<nav className={styles.navigation} 
-			data-aos="fade-up">
+			<nav className={styles.navigation}
+				data-aos="fade-up">
 				{visibleLinks.map((link, id) => (
 					<Fragment key={link.id}>
 						<Link

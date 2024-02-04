@@ -2,9 +2,9 @@ import cl from 'classnames';
 import styles from "../home.module.scss"
 
 
-import { Title } from '@/app/components/Title';
 import { RoadMapArtMenu } from './RoadMapArtMenu';
-import { ImagesSubtitle } from '@/app/components/TitleWithImage';
+import { Title } from '@/src/components/Title';
+import { ImagesSubtitle } from '@/src/components/TitleWithImage';
 interface ArtMenuProps {
 	isActiveid: string
 }

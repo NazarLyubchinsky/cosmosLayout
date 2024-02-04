@@ -1,9 +1,9 @@
 
-import './styles/reset.scss';
-import './styles/global.scss';
-import './styles/variables.scss';
-import Footer from './components/Footer/Footer';
-import { Header } from './components/Header';
+import '../src/styles/reset.scss';
+import '../src/styles/global.scss';
+import '../src/styles/variables.scss';
+import { Header } from '@/src/components/Header';
+import Footer from '@/src/components/Footer/Footer';
 
 
 export default function RootLayout({
