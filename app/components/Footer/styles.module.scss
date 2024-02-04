@@ -1,0 +1,57 @@
+@import "../../styles/mixins";
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 24px;
+	background-color: #161931;
+}
+
+.logo a {
+	height: 100%;
+	color: var(--light);
+	text-decoration: none;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.rights {
+	color: var(--light);
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.rights a {
+	color: var(--light);
+}
+
+.socials {
+	display: flex;
+	gap: 15px;
+	transition: opacity 0.3s;
+}
+
+.socials svg {
+	width: 24px;
+	height: 24px;
+	fill: var(--light);
+}
+
+.socials svg:hover {
+	@include hoverAndvisited;
+}
+
+@media only screen and (max-width: 500px) {
+	.socials:last-child {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.footer {
+		flex-direction: column;
+		gap: 10px;
+		padding: 15px;
+	}
+}

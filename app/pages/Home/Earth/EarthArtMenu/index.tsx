@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 import styles from './style.module.scss';
 import { EarthArtMenuItem } from './EarthArtMenuItem';
+import useAOS from '@/app/hooks/useAos';
 
 interface EarthArtMenuProps { }
 
@@ -40,8 +41,10 @@ const links = [
 
 export const EarthArtMenu = ({ }: EarthArtMenuProps) => {
 	const [openedId, setOpenedId] = useState(1);
+	const { aosRef } = useAOS();
+	
 	return (
-		<div className={styles.artMenu}>
+		<div className={styles.artMenu}  data-aos="fade-left">
 			{links.map((link) => (
 				<EarthArtMenuItem
 					key={link.id}

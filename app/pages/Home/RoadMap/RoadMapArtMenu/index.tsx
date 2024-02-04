@@ -4,6 +4,7 @@ import styles from './style.module.scss';
 import Image from 'next/image';
 
 import { RoadMapArtMenuItem } from './RoadMapArtMenuItem';
+import useAOS from '@/app/hooks/useAos';
 
 interface RoadMapArtMenuProps { }
 
@@ -66,13 +67,19 @@ export const RoadMapArtMenu = ({ }: RoadMapArtMenuProps) => {
 	const [activeColor, setActiveColor] = useState(links[0].color);
 	const [activeImage, setActiveImage] = useState(links[0].image);
 
+
+
 	useEffect(() => {
 		setActiveColor(links.find((link) => link.id === openedId)?.color ?? activeColor);
 	}, [openedId, activeColor]);
 
+	const { aosRef } = useAOS();
+
 	return (
 		<>
-			<div className={styles.artMenu}>
+			<div className={styles.artMenu}
+
+			>
 				{links.map((link) => (
 					<RoadMapArtMenuItem
 						key={link.id}
@@ -91,6 +98,8 @@ export const RoadMapArtMenu = ({ }: RoadMapArtMenuProps) => {
 				))}
 			</div>
 			<Image
+				ref={aosRef}
+				data-aos="fade-right"
 				src={activeImage}
 				alt={'roadMap'}
 				width="1000"
