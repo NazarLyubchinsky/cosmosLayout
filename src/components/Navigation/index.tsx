@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link';
 import cl from 'classnames';
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
@@ -87,7 +89,6 @@ export const Navigation: React.FC<NavigationProps> = () => {
 
 	const visibleLinks = links.slice(centerIndex - 1, centerIndex + 2);
 
-	// const { aosRef } = useAOS();
 
 	return (
 		<>

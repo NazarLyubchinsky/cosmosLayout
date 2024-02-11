@@ -8,7 +8,7 @@ export type TypeArtButton = 'BluePurple' | 'GreenYellow' | 'Blue' | 'YellowPink'
 export type ButtonKind = 'Button' | 'ButtonRotate';
 
 interface ButtonProps {
-	onClick?: () => void;
+	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void 
 	children: ReactNode;
 	className?: string;
 	type?: TypeArtButton;

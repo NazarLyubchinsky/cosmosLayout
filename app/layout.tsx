@@ -2,10 +2,11 @@
 import '../src/styles/reset.scss';
 import '../src/styles/global.scss';
 import '../src/styles/variables.scss';
-import { Header } from '@/src/components/Header';
-import Footer from '@/src/components/Footer/Footer';
 
+import { Header } from '@components/Header';
+import Footer from '@components/Footer/Footer';
 
+import AOSinit from '@/src/hooks/useAos';
 export default function RootLayout({
 	children,
 }: {
@@ -24,6 +25,7 @@ export default function RootLayout({
 			<meta name='description' content={seo.description} />
 			<body
 			>
+				<AOSinit />
 				<Header />
 				{children}
 				<Footer />
