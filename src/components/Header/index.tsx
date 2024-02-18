@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link"
 import { Button } from "../Button"
 import { Logo } from "../Logo"
 import { SocialNetworks } from "../SocialNetworks"
@@ -7,7 +8,7 @@ import { SocialNetworks } from "../SocialNetworks"
 import styles from './styles.module.scss'
 
 export const Header = () => {
-	
+
 	return (
 		<header
 			data-aos="fade-down"
@@ -16,12 +17,14 @@ export const Header = () => {
 		>
 			<Logo />
 			<SocialNetworks />
-			<Button
-				kind='Button'
-				onClick={() => { }}
-			>
-				Whitepaper
-			</Button>
+			<Link href={'/planets'}>
+				<Button
+					kind='Button'
+					onClick={() => { }}
+				>
+					all planets
+				</Button>
+			</Link>
 		</header>
 	)
 }
