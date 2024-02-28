@@ -16,12 +16,20 @@ export const ContextProvider: React.FC<StoreProviderProps> = ({ children }) => {
 
 
 
-	const value = useMemo(
-		() => ({
-			activeLinkId, setActiveLinkId, isModalOpen, setIsModalOpen, openedId, setOpenedId
-		}),
-		[activeLinkId, setActiveLinkId, isModalOpen, setIsModalOpen, openedId, setOpenedId]
-	);
+
+
+	const value =
+		useMemo(
+			() =>
+			({
+				activeLinkId, setActiveLinkId, isModalOpen, setIsModalOpen, openedId, setOpenedId,
+				
+			})
+			,
+			[activeLinkId, setActiveLinkId, isModalOpen, setIsModalOpen, openedId, setOpenedId,
+			
+			]
+		);
 
 	return <Context.Provider value={value}>{children}</Context.Provider>;
 };

@@ -8,4 +8,37 @@
 	left: 2.8571rem;
 	right: 2.8571rem;
 	z-index: 9;
+	@media screen and (min-width: 768px) {
+		&Burger {
+			display: none;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		grid-template-columns: 1fr auto auto;
+		&Button {
+			display: none;
+		}
+		position: fixed;
+		z-index: 100;
+		transition: transform 0.2s ease-in-out;
+		transition: all 0.5s;
+	}
+	@media screen and (max-width: 576px) {
+		grid-template-columns: 1fr auto;
+		&Button,
+		&Social {
+			display: none;
+		}
+
+		position: fixed;
+		z-index: 100;
+		transition: transform 0.2s ease-in-out;
+		transition: all 0.5s;
+		left: 1.8571rem;
+		right: 1.8571rem;
+	}
+}
+
+.active {
+	top: -30px;
 }

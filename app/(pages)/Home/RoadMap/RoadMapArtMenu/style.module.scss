@@ -6,6 +6,9 @@
 	position: relative;
 	top: 11.125rem;
 
+	@media screen and (max-width: 576px) {
+		gap: 3.125rem;
+	}
 	&::after {
 		content: "";
 		position: absolute;
@@ -21,6 +24,12 @@
 		right: 0;
 		top: 0;
 		max-height: 100%;
+
+		@media screen and (max-width: 992px) {
+			right: 50%;
+			top: 50%;
+			transform: translate(50%, -40%);
+		}
 	}
 
 	&Item {
@@ -123,6 +132,15 @@
 		background-position: center center;
 		background-size: contain;
 	}
+	&CardMore {
+		position: absolute;
+		top: -85px;
+
+		@media screen and (max-width: 576px) {
+			position: relative;
+			top: 0;
+		}
+	}
 
 	&ItemActive {
 		.artMenuItemTitle {
@@ -142,9 +160,3 @@
 		}
 	}
 }
-
-.cardMore {
-	position: absolute;
-	top: -85px;
-}
-

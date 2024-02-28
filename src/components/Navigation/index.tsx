@@ -7,40 +7,9 @@ import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 
 import { useTodoContext } from '@/src/context/useTodoContext';
+import { linksNavigations } from '@/src/utils/constants';
 
 
-const links = [
-	{
-		id: 1,
-		title: 'Home',
-		href: '#home',
-		active: true,
-	},
-	{
-		id: 2,
-		title: 'Factions',
-		href: '#factions',
-		active: false,
-	},
-	{
-		id: 3,
-		title: 'Roadmap',
-		href: '#roadmap',
-		active: false,
-	},
-	{
-		id: 4,
-		title: 'Collaborations',
-		href: '#collaborations',
-		active: false,
-	},
-	{
-		id: 5,
-		title: 'FAQ',
-		href: '#faq',
-		active: false,
-	},
-];
 
 interface NavigationProps {
 }
@@ -57,7 +26,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
 	const handleScroll = useCallback(() => {
 		const scrollPosition = window.scrollY;
 
-		const visibleSection = links.find((link) => {
+		const visibleSection = linksNavigations.find((link) => {
 			const targetId = removeHash(link.href);
 			const targetElem = elementOffsets.current[targetId] || document.getElementById(targetId);
 			elementOffsets.current[targetId] = targetElem;
@@ -70,12 +39,12 @@ export const Navigation: React.FC<NavigationProps> = () => {
 			return false;
 		});
 
-		const activeSection = visibleSection || links[0];
+		const activeSection = visibleSection || linksNavigations[0];
 
 		if (activeSection && activeLinkId !== removeHash(activeSection.href)) {
 			setActiveLinkId(removeHash(activeSection.href));
-			if (links.indexOf(activeSection) > 0 && links.indexOf(activeSection) < links.length - 1) {
-				setCenterIndex(links.indexOf(activeSection));
+			if (linksNavigations.indexOf(activeSection) > 0 && linksNavigations.indexOf(activeSection) < linksNavigations.length - 1) {
+				setCenterIndex(linksNavigations.indexOf(activeSection));
 			}
 		}
 	}, [activeLinkId, setActiveLinkId]);
@@ -87,7 +56,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
 		};
 	}, [handleScroll]);
 
-	const visibleLinks = links.slice(centerIndex - 1, centerIndex + 2);
+	const visibleLinks = linksNavigations.slice(centerIndex - 1, centerIndex + 2);
 
 
 	return (

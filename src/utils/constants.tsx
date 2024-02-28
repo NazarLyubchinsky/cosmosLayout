@@ -45,3 +45,36 @@ export const getGradientForPlanet = (name: string) => {
 			return 'linear-gradient(to bottom, #708090 0%,  #708090 50%, #708090 100%)'
 	}
 }
+
+export const linksNavigations = [
+	{
+		id: 1,
+		title: 'Home',
+		href: '#home',
+		active: true,
+	},
+	{
+		id: 2,
+		title: 'Factions',
+		href: '#factions',
+		active: false,
+	},
+	{
+		id: 3,
+		title: 'Roadmap',
+		href: '#roadmap',
+		active: false,
+	},
+	{
+		id: 4,
+		title: 'Collaborations',
+		href: '#collaborations',
+		active: false,
+	},
+	{
+		id: 5,
+		title: 'FAQ',
+		href: '#faq',
+		active: false,
+	},
+];

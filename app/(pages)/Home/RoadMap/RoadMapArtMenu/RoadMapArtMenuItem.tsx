@@ -19,52 +19,53 @@ interface RoadMapArtMenuItemProps {
 }
 
 
-export const RoadMapArtMenuItem: React.FC<RoadMapArtMenuItemProps> = ({
-	id,
-	href,
-	title,
-	isOpened,
-	onClick,
-	subtitle,
-	color,
-}) => {
+export const RoadMapArtMenuItem: React.FC<RoadMapArtMenuItemProps> =
+	({
+		id,
+		href,
+		title,
+		isOpened,
+		onClick,
+		subtitle,
+		color,
+	}) => {
 
-	return (
-		<>
-			<Link
-				href={href}
-				onClick={onClick}
-				className={cl(
-					styles.artMenuItem,
-					isOpened && styles.artMenuItemActive
-				)}
-			>
-				<span className={styles.artMenuDecorator} />
+		return (
+			<>
+				<Link
+					href={href}
+					onClick={onClick}
+					className={cl(
+						styles.artMenuItem,
+						isOpened && styles.artMenuItemActive
+					)}
+				>
+					<span className={styles.artMenuDecorator} />
 
-				<div className={cl(styles.cardMore, styles.artMenuCard)}>
-					<Button
-						kind="ButtonRotate"
-						isOpened={isOpened}
-					>
-						{isOpened && <CreateBlurredEllipsesIcon color={color} className="ellipsesIcon" />}
-						{!isOpened && (
-							<CreateBlurredEllipsesIcon2
-								className="ellipsesIcon2"
-								color={color}
-								id={id}
-							/>
-						)}
-						<div className={cl(styles.artMenuItemContent, isOpened && styles.artMenuItemContentActive)}>
-							<h3 className={styles.artMenuItemContentTop}>{'0' + id}</h3>
-							<h4 className={styles.artMenuItemContentCenter}>{title}</h4>
-							<h5 className={styles.artMenuItemContentBottom}>{subtitle}</h5>
-						</div>
+					<div className={cl(styles.artMenuCardMore, styles.artMenuCard)}>
+						<Button
+							kind="ButtonRotate"
+							isOpened={isOpened}
+						>
+							{isOpened && <CreateBlurredEllipsesIcon color={color} className="ellipsesIcon" />}
+							{!isOpened && (
+								<CreateBlurredEllipsesIcon2
+									className="ellipsesIcon2"
+									color={color}
+									id={id}
+								/>
+							)}
+							<div className={cl(styles.artMenuItemContent, isOpened && styles.artMenuItemContentActive)}>
+								<h3 className={styles.artMenuItemContentTop}>{'0' + id}</h3>
+								<h4 className={styles.artMenuItemContentCenter}>{title}</h4>
+								<h5 className={styles.artMenuItemContentBottom}>{subtitle}</h5>
+							</div>
 
-					</Button>
-				</div>
-			</Link>
-		</>
-	);
-};
+						</Button>
+					</div>
+				</Link>
+			</>
+		);
+	};
 
 

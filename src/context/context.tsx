@@ -7,6 +7,9 @@ export interface ContextProps {
 	setActiveLinkId: (newLinkId: string) => void;
 	setIsModalOpen: (newIsModalOpen: boolean) => void;
 	setOpenedId: (newOpenedId: number) => void;
+
+
+	
 }
 
 
@@ -17,5 +20,6 @@ export const Context = createContext<ContextProps>({
 	setActiveLinkId: () => { },
 	setIsModalOpen: () => { },
 	setOpenedId: () => { },
+
 });
 

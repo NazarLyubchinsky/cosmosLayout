@@ -37,3 +37,9 @@
 		background: url("./images/star.svg") no-repeat center center;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.navigation {
+		display: none;
+	}
+}

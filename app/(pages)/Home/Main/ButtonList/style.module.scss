@@ -1,0 +1,9 @@
+.buttonList {
+	display: flex;
+	justify-content: center;
+	gap: 1.4286rem;
+	align-items: center;
+	@media only screen and (max-width: 460px) {
+		flex-direction: column;
+	}
+}

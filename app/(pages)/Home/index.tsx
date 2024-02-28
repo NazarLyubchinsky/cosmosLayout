@@ -10,13 +10,13 @@ export const HomePage = ({
 }) => {
 	return (
 		<>
-			<Main isActiveid='home' />
+			{/* <Main isActiveid='home' /> */}
 
-			<Earth isActiveid='factions' />
+			{/* <Earth isActiveid='factions' /> */}
 
 			<RoadMap isActiveid='roadmap' />
-			<Collaborations isActiveid='collaborations' />
-			<Faq isActiveid='faq' />
+			{/* <Collaborations isActiveid='collaborations' />
+			<Faq isActiveid='faq' /> */}
 		</>
 
 

@@ -20,28 +20,45 @@
 		font-size: 5.7143rem;
 	}
 }
+@media only screen and (max-width: 1200px) {
+	.title {
+		&Large {
+			text-align: center;
+			font-size: 4.2rem;
+		}
+	}
+}
+@media only screen and (max-width: 992px) {
+	.title {
+		&Large {
+			text-align: center;
+			font-size: 3rem;
+		}
+	}
+}
 @media only screen and (max-width: 768px) {
 	.title {
 		&Medium {
-			font-size: 4rem;
+			text-align: center;
+			font-size: 3rem;
 			margin-bottom: 1.4286rem;
 		}
 	}
 }
 
-@media only screen and (max-width: 576px) {
-	.title {
-		&Medium {
-			font-size: 3.5rem;
-			margin-bottom: 1.4286rem;
-		}
-	}
-}
-@media only screen and (max-width: 500px) {
-	.title {
-		&Medium {
-			font-size: 8vw;
-			margin-bottom: 1.4286rem;
-		}
-	}
-}
+// @media only screen and (max-width: 576px) {
+// 	.title {
+// 		&Medium {
+// 			font-size: 2.4rem;
+// 			margin-bottom: 1.4286rem;
+// 		}
+// 	}
+// }
+// @media only screen and (max-width: 500px) {
+// 	.title {
+// 		&Medium {
+// 			font-size: 6vw;
+// 			margin-bottom: 1.4286rem;
+// 		}
+// 	}
+// }
