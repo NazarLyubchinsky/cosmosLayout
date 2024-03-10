@@ -6,10 +6,6 @@
 	margin-bottom: 2.125rem;
 	z-index: 3;
 	&Text {
-		// position: absolute;
-		// left: 30px;
-		// top: -23px;
-		
 		color: #ffb800;
 		font-size: 15px;
 		font-family: Mazzar;
@@ -17,12 +13,13 @@
 		word-wrap: break-word;
 	}
 }
-.BlockSvg{
+.BlockSvg {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
-	:last-child{
+
+	:last-child {
 		margin-left: 20px;
 	}
+
 }

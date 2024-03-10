@@ -8,6 +8,7 @@
 
 	@media screen and (max-width: 576px) {
 		gap: 3.125rem;
+		top: 5.125rem;
 	}
 	&::after {
 		content: "";
@@ -59,6 +60,8 @@
 			align-items: flex-start;
 			padding-left: 1.875rem;
 			padding-right: 4rem;
+			padding-bottom: .9375rem;
+			padding-top: .9375rem;
 			text-align: start;
 			&Active {
 				color: var(--primary);
@@ -157,6 +160,10 @@
 		.artMenuCard {
 			opacity: 1;
 			height: 13.3571rem;
+			@media screen and (max-width: 576px) {
+				height: 100%;
+
+			}
 		}
 	}
 }

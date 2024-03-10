@@ -48,6 +48,10 @@
 	padding-top: 10px!important;
 	align-items: stretch!important;
 
+	@media screen and (max-width: 700px) {
+		margin-top: 15px;
+	}
+
 	.buttonAngleLeft{
 		top: 50px;
 	}

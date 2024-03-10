@@ -75,7 +75,6 @@ export const RoadMapArtMenu = ({ }: RoadMapArtMenuProps) => {
 	return (
 		<>
 			<div className={styles.artMenu}
-
 			>
 				{links.map((link) => (
 					<RoadMapArtMenuItem

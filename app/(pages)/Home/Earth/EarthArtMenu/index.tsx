@@ -49,7 +49,7 @@ export const EarthArtMenu = ({ links}: EarthArtMenuProps) => {
 	const { openedId, setOpenedId } = useTodoContext();
 
 	return (
-		<div className={styles.artMenu} data-aos="fade-left">
+		<div className={styles.artMenu} data-aos="fade-right">
 			{links.map((link) => (
 				<EarthArtMenuItem
 					key={link.id}

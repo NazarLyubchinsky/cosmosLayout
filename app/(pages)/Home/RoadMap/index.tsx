@@ -4,7 +4,7 @@ import styles from "../home.module.scss"
 
 import { RoadMapArtMenu } from './RoadMapArtMenu';
 import { Title } from '@components/Title';
-import { ImagesSubtitle } from '@components/TitleWithImage';
+import { ImagesSubtitle, TitleWithImage } from '@components/TitleWithImage';
 interface ArtMenuProps {
 	isActiveid: string
 }
@@ -26,7 +26,7 @@ export const RoadMap = ({ isActiveid }: ArtMenuProps) => {
 
 				<Title size="Small" >
 					<span>ROAD</span>
-					<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
+					<svg className={styles.svg} xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
 						<g clipPath="url(#clip0_0_729)">
 							<path fillRule="evenodd" clipRule="evenodd" d="M19.3692 39L39 19.5L19.3692 -8.58091e-07L19.3692 19.24L0 -1.70474e-06L-1.70474e-06 39L19.3692 19.7599L19.3692 39Z" fill="white" />
 						</g>
@@ -36,7 +36,7 @@ export const RoadMap = ({ isActiveid }: ArtMenuProps) => {
 							</clipPath>
 						</defs>
 					</svg>
-					<span style={{ marginLeft: "13px" }}>MAP</span>
+					<span className={styles.lastText}>MAP</span>
 				</Title>
 			</div>
 			<RoadMapArtMenu />

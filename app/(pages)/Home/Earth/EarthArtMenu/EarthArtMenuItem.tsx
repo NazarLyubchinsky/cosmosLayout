@@ -25,7 +25,6 @@ export const EarthArtMenuItem: React.FC<EarthArtMenuItemProps> = ({
 	onClick
 }) => {
 	return (
-
 		<Link
 			href={`${href}`}
 			onClick={onClick}
