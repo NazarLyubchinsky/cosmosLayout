@@ -23,7 +23,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
 	const [centerIndex, setCenterIndex] = useState(1);
 
 
-	const handleScroll = useCallback((e: React.SyntheticEvent) => {
+	const handleScroll = useCallback((e:any) => {
 		e.preventDefault();
 		const scrollPosition = window.scrollY;
 
