@@ -11,6 +11,8 @@
 	z-index: 9;
 
 	&Link {
+		border: none;
+		background: transparent;
 		cursor: pointer;
 		color: var(--light);
 		text-decoration: none;
