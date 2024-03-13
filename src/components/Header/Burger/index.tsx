@@ -7,6 +7,7 @@ import cl from 'classnames';
 import Link from 'next/link';
 import styles from './style.module.scss'
 import { Logo } from '../../Logo';
+import { NavigationLinkList } from '../../Navigation/NavigationLinkList';
 
 export const Burger = () => {
 	const { activeLinkId } = useTodoContext();
@@ -44,17 +45,7 @@ export const Burger = () => {
 								data-aos="fade-up">
 								{visibleLinks.map((link, id) => (
 									<Fragment key={link.id}>
-										<Link
-											href={link.href}
-											onClick={handleClick}
-											className={cl(
-												styles.navigationLink,
-												activeLinkId === removeHash(link.href) && styles.navigationLinkActive
-											)}
-										>
-											{link.title}
-										</Link>
-										{id < visibleLinks.length - 1 && <span className={styles.navigationStar} />}
+										<NavigationLinkList onClick={handleClick} link={link} activeLinkId={activeLinkId} removeHash={removeHash} visibleLinks={visibleLinks} id={id} />
 									</Fragment>
 								))}
 							</nav >
