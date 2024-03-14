@@ -50,31 +50,31 @@ export const linksNavigations = [
 	{
 		id: 1,
 		title: 'Home',
-		href: '#home',
+		href: 'home',
 		active: true,
 	},
 	{
 		id: 2,
 		title: 'Factions',
-		href: '#factions',
+		href: 'factions',
 		active: false,
 	},
 	{
 		id: 3,
 		title: 'Roadmap',
-		href: '#roadmap',
+		href: 'roadmap',
 		active: false,
 	},
 	{
 		id: 4,
 		title: 'Collaborations',
-		href: '#collaborations',
+		href: 'collaborations',
 		active: false,
 	},
 	{
 		id: 5,
 		title: 'FAQ',
-		href: '#faq',
+		href: 'faq',
 		active: false,
 	},
 ];

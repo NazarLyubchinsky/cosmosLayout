@@ -11,9 +11,7 @@ export const HomePage = ({
 	return (
 		<>
 			<Main isActiveid='home' />
-
 			<Earth isActiveid='factions' />
-
 			<RoadMap isActiveid='roadmap' />
 			<Collaborations isActiveid='collaborations' />
 			<Faq isActiveid='faq' />
