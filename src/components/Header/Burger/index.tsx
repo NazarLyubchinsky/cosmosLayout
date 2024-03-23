@@ -1,16 +1,12 @@
 "use client"
 import { Fragment, useState } from 'react';
 import { linksNavigations } from '@/src/utils/constants';
-import { useTodoContext } from '@/src/context/useTodoContext';
-import cl from 'classnames';
 
-import Link from 'next/link';
 import styles from './style.module.scss'
 import { Logo } from '../../Logo';
 import { NavigationLinkList } from '../../Navigation/NavigationLinkList';
 
 export const Burger = () => {
-	const { activeLinkId } = useTodoContext();
 
 	const [isModalOpenBurger, setIsModalOpenBurger] = useState(false)
 
@@ -18,9 +14,6 @@ export const Burger = () => {
 		setIsModalOpenBurger(!isModalOpenBurger);
 		isModalOpenBurger ? document.body.style.overflow = 'auto' : document.body.style.overflow = 'hidden'
 	};
-
-	const removeHash = (href: string): string => href.replace(/.*\#/, '');
-	const visibleLinks = linksNavigations
 
 	return (
 		<div className={styles.modal_button_container}>
@@ -43,9 +36,9 @@ export const Burger = () => {
 
 							<nav className={styles.navigation}
 								data-aos="fade-up">
-								{visibleLinks.map((link, id) => (
+								{linksNavigations.map((link, id) => (
 									<Fragment key={link.id}>
-										<NavigationLinkList onClick={handleClick} link={link} activeLinkId={activeLinkId} removeHash={removeHash} visibleLinks={visibleLinks} id={id} />
+										<NavigationLinkList onClick={handleClick} link={link} id={id} />
 									</Fragment>
 								))}
 							</nav >

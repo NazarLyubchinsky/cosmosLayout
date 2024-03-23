@@ -1,5 +1,5 @@
 import { TitleWithImage } from "@/src/components/TitleWithImage"
-import PlanetsCard from "@/src/components/PlanetsCard"
+import PlanetsCard from "@/src/components/PlanetList"
 
 import { getPlanet } from "@/src/actions/getPlanet"
 import { getGradientForPlanet } from "@/src/utils/constants"

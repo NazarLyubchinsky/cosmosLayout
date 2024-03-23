@@ -7,13 +7,13 @@ export const ButtonList = () => {
 	return (
 		<ul className={styles.buttonList}>
 			<li>
-				<Link href={'#collaborations'}>
+				{/* <Link href={'#collaborations'}>
 					<Button
 						kind='Button'
 					>
 						Collaborations
 					</Button>
-				</Link>
+				</Link> */}
 
 			</li>
 			<li>

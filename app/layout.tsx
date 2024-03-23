@@ -7,6 +7,7 @@ import { Header } from '@components/Header';
 import Footer from '@components/Footer/Footer';
 
 import AOSinit from '@/src/hooks/useAos';
+
 export default function RootLayout({
 	children,
 }: {

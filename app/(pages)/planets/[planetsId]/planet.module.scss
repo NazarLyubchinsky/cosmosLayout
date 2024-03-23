@@ -5,6 +5,7 @@
 	min-height: 600px;
 	background-color: #24273f;
 	.planet {
+		gap: 1.5625rem;
 		font-family: Montserrat, sans-serif;
 		display: flex;
 		flex-direction: row;
@@ -24,7 +25,7 @@
 			background-repeat: no-repeat;
 		}
 		&Content {
-			min-width: 50%;
+			min-width: 360px;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 1rem;
@@ -46,5 +47,20 @@
 			}
 		}
 	}
-	
+}
+@media screen and (max-width: 768px) {
+	.section {
+		padding: 7rem 1rem;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.planet {
+		flex-direction: column !important;
+		align-items: center;
+		&Content {
+			min-width: unset!important;
+			width: calc(100% - 2rem);
+		}
+	}
 }

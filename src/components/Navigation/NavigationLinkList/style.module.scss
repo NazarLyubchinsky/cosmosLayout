@@ -31,6 +31,9 @@
 		width: 1.5714rem;
 		height: 1.5714rem;
 		background: url("../images/star.svg") no-repeat center center;
+		&:last-child{
+			display: none;
+		}
 		@media screen and (max-width: 768px) {
 			&:nth-child(6) {
 				display: none;

@@ -1,0 +1,14 @@
+.swiper-wrapper {
+	margin-top: 2rem !important;
+}
+.swiper-pagination {
+	position: relative !important;
+	bottom: 0px !important;
+}
+
+@media (min-width: 567px) {
+	.swiper-wrapper,
+	.swiper-pagination {
+		display: none;
+	}
+}
