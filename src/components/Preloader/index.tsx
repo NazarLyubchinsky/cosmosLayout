@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-
 // loader
 import LoadingOverlay from 'react-loading-overlay-nextgen';
 
@@ -17,19 +16,19 @@ const Preloader = () => {
 			<LoadingOverlay
 
 				styles={{
-					// overlay: (base) => ({
-					// 	...base,
-					// 	position: 'unset',
-					// 	backgroundColor: 'unset',
-					// 	display: 'flex',
-					// 	alignItems: 'center'
-					// }),
-				
+					overlay: (base) => ({
+						...base,
+						position: 'unset',
+						backgroundColor: 'unset',
+						display: 'flex',
+						alignItems: 'center'
+					}),
+
 				}}
 				spinner
 				text='Loading...'
 				active
-				 />
+			/>
 
 		</div>
 	)

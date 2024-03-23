@@ -51,7 +51,7 @@ export const linksNavigations = [
 		id: 1,
 		title: 'Home',
 		href: 'home',
-		active: true,
+		active: false,
 	},
 	{
 		id: 2,

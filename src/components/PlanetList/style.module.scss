@@ -1,0 +1,36 @@
+.planets {
+	&Other {
+		font-size: 2rem;
+	}
+	&Row {
+		margin-top: 2rem;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1em;
+	}
+}
+@media screen and (max-width: 992px) {
+	.planets {
+		&Row {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.5em;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.planets {
+		&Row {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1em;
+		}
+	}
+}
+
+@media (max-width: 567px) {
+	.planets {
+		&Row {
+			display: none;
+		}
+	}
+}

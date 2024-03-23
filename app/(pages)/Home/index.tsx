@@ -4,8 +4,6 @@ import { Main } from "./Main"
 import { RoadMap } from "./RoadMap"
 import { Faq } from "./FAQ"
 
-
-
 export const HomePage = ({
 }) => {
 	return (

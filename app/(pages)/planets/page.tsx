@@ -1,6 +1,8 @@
 import styles from './planets.module.scss'
 import { TitleWithImage } from "@/src/components/TitleWithImage";
-import PlanetsCard from "@/src/components/PlanetsCard";
+import PlanetsList from "@/src/components/PlanetList";
+
+
 
 export default async function PlanetPage() {
 
@@ -9,7 +11,8 @@ export default async function PlanetPage() {
 		<section className={styles.section}>
 			<TitleWithImage title="Planets" subtitle="planets" />
 
-			<PlanetsCard />
+			<PlanetsList />
+
 		</section>
 	)
 }

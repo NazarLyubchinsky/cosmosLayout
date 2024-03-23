@@ -1,13 +1,5 @@
 .planets {
-	&Other {
-		font-size: 2rem;
-	}
 	&Row {
-		margin-top: 2rem;
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 1em;
-
 		&Content {
 			background-color: rgb(20, 24, 35);
 			padding: 2rem;
