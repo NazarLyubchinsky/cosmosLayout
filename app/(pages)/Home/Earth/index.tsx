@@ -3,10 +3,8 @@ import { ReactNode, useMemo, useState } from 'react'
 
 import cl from 'classnames'
 import styles from "../home.module.scss"
-import { EarthArtMenu } from './EarthArtMenu'
 import { Title } from '@components/Title'
-import { EarthArtMenuItemModal } from './EarthArtMenu/EarthArtMenuItemModal'
-import { useTodoContext } from '@/src/context/useTodoContext'
+import { EarthArtMenuItemModal } from './EarthArtMenu/EarthArtMenuItemModal/EarthArtMenuItemModal'
 import { GlassCard } from '@/src/components/GlassCard'
 import { EarthArtMenuItem } from './EarthArtMenu/EarthArtMenuItem'
 
@@ -253,7 +251,6 @@ const links: ArtMenuLinks[] = [
 
 
 export const Earth = ({ isActiveid }: EarthProps) => {
-	// const { isModalOpen } = useTodoContext();
 
 	const [openedId, setOpenedId] = useState(1);
 	const [modalInfo, setModalInfo] = useState<ModalInfo | null>(null);
@@ -310,8 +307,8 @@ export const Earth = ({ isActiveid }: EarthProps) => {
 					text={modalInfo.content}
 					scrollContent={
 						<div className={styles.cardList}>
-							{modalInfo.listImages.map((item, id) =>{
-								 return(
+							{modalInfo.listImages.map((item, id) => {
+								return (
 									<GlassCard
 										key={id}
 										type={item.type}
@@ -327,3 +324,4 @@ export const Earth = ({ isActiveid }: EarthProps) => {
 		</section>
 	)
 }
+

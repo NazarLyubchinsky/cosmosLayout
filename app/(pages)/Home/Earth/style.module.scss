@@ -1,0 +1,205 @@
+// text
+
+.text {
+	font-family: "Move X";
+	font-size: 15px;
+	line-height: 1.2;
+	max-width: 848px;
+	line-height: 1.4;
+	text-transform: uppercase;
+
+	p {
+		margin-bottom: 13px;
+	}
+}
+
+//  // modal
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #091419;
+	z-index: 999;
+	background-size: cover;
+	overflow-y: auto;
+
+	&Title {
+		font-family: "TTOctosquares";
+		font-size: 6vw;
+		font-weight: 500;
+		line-height: 1.2;
+		max-width: 848px;
+		line-height: 1.4;
+		text-transform: uppercase;
+		background-repeat: no-repeat;
+		background-position: left center;
+		text-indent: -1234em;
+		margin: 30px 0 20px;
+		background-size: contain;
+	}
+
+	&Text {
+		margin-bottom: 20px;
+	}
+
+	&Header {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&Container {
+		min-width: 900px;
+		padding: 50px;
+		box-sizing: border-box;
+		display: grid;
+		grid-template-rows: auto auto auto 1fr;
+		gap: 20px;
+		max-height: 100vh;
+	}
+
+	&Content {
+		padding-bottom: 50px;
+	}
+
+	&Button {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	&Arrow {
+		display: inline-block;
+		margin-left: 10px;
+	}
+}
+
+//// art menu
+.artMenu {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2.8rem;
+	position: relative;
+	right: 4px;
+	z-index: 1;
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: 19px;
+		top: 2px;
+		width: 3px;
+		bottom: 2px;
+		background: var(--light);
+		z-index: 0;
+	}
+
+	&Card {
+		margin-top: 0;
+		height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: all 0.3s;
+	}
+
+	&Item {
+		color: var(--light);
+		text-decoration: none;
+		display: block;
+		text-align: right;
+		font-size: 1.5714rem;
+		font-family: "TTOctosquares", sans-serif;
+		padding-right: 3.8rem;
+		position: relative;
+		z-index: 1;
+
+		&Title {
+			transition: opacity 0.3s;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+
+		&:visited,
+		&:hover {
+			color: var(--light);
+		}
+
+		.artMenuDecorator {
+			background-image: url("./EarthArtMenu/images/white_left_border.png");
+		}
+
+		&:hover {
+			.artMenuDecorator {
+				background-image: url("./EarthArtMenu/images/color_left_border.png");
+			}
+		}
+
+		&:nth-child(odd) {
+			.artMenuDecorator {
+				background-image: url("./EarthArtMenu/images/white_right_border.png");
+			}
+
+			&:hover {
+				.artMenuDecorator {
+					background-image: url("./EarthArtMenu/images/color_right_border.png");
+				}
+			}
+		}
+
+		&:last-child {
+			.artMenuDecorator {
+				top: auto;
+				bottom: -4px;
+			}
+		}
+	}
+
+	&Decorator {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		width: 3rem;
+		height: 2.5rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+	}
+
+	&ItemActive {
+		.artMenuDecorator {
+			background-image: url("./EarthArtMenu/images/color_left_border.png");
+
+			&:nth-child(odd) {
+				background-image: url("./EarthArtMenu/images/color_right_border.png");
+			}
+		}
+		.artMenuTitle {
+			text-transform: uppercase;
+		}
+
+		.artMenuCard {
+			opacity: 1;
+			height: 13.3571rem;
+			margin-top: 1.2rem;
+		}
+	}
+}
+
+.cardMore {
+	position: relative !important;
+	padding-left: 2.5rem !important;
+
+	&Button {
+		left: 0 !important;
+		top: 10% !important;
+		position: absolute !important;
+	}
+
+	&Image {
+		display: block;
+	}
+}
+

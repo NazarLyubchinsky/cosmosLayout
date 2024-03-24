@@ -12,6 +12,6 @@ export const GlassCard: React.FC<GlassCardProps> = ({
 	type
 }) => (
 	<div className={cl(styles.classCard, styles[type])}>
-		<Image width={200} height={200} src={imageUrl} alt="Card" className={styles.classCardImage} />
+		<Image width={100} height={100} src={imageUrl} alt="Card" className={styles.classCardImage} />
 	</div>
 );

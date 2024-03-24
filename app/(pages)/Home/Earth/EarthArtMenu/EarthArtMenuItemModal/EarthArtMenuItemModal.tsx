@@ -1,10 +1,9 @@
 "use client"
-import { ReactNode } from 'react';
-import Modal from '@/src/components/Modal/Modal';
-import { useTodoContext } from '@/src/context/useTodoContext'
+import { ReactNode, useEffect } from 'react';
+// import { useTodoContext } from '@/src/context/useTodoContext'
 import styles from './style.module.scss';
 import { Button } from '@/src/components/Button';
-
+import { TextModal } from './TextModal';
 
 interface EarthArtMenuItemModalProps {
 	links: Link[];
@@ -25,19 +24,18 @@ export const EarthArtMenuItemModal = ({ links, backgroundUrl,
 	text,
 	scrollContent,
 	isNext, }: EarthArtMenuItemModalProps) => {
-	const { isModalOpen, openedId } = useTodoContext();
+	// const { isModalOpen, openedId } = useTodoContext();
 
-	const openedLink = links.find((link) => link.id === openedId);
+	// const openedLink = links.find((link) => link.id === openedId);
+	useEffect(() => {
+		document.body.classList.add('bodyOverflow');
 
+		return () => {
+			document.body.classList.remove('bodyOverflow');
+		}
+	}, []);
 	return (
 		<>
-			{/* {isModalOpen && (
-				<Modal>
-					{
-						openedLink && <h2>{openedLink.title}</h2>
-					}
-				</Modal>
-			)} */}
 			<div
 				className={styles.modal}
 				style={{
@@ -84,10 +82,11 @@ export const EarthArtMenuItemModal = ({ links, backgroundUrl,
 							backgroundImage: `url(${titleUrl})`,
 						}}
 						className={styles.modalTitle}
-					>{title}</h2>
-					{/* <Text
+					>{title}
+					</h2>
+					<TextModal
 						className={styles.modalText}
-					>{text}</Text> */}
+					>{text}</TextModal>
 					<div className={styles.modalContent}>
 						{scrollContent}
 					</div>

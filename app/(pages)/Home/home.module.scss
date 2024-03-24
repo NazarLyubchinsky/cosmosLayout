@@ -18,6 +18,34 @@
 	&Earth {
 		background: url("/bg/earth_2_bg.jpg") center no-repeat no-repeat;
 		justify-content: space-between;
+		.cardList {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 0px 40px;
+
+			*:nth-child(2n) {
+				margin-top: 40px;
+			}
+		}
+		.artMenu {
+			position: relative;
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 2.8rem;
+			position: relative;
+			right: 4px;
+			z-index: 1;
+			&::after {
+				content: "";
+				position: absolute;
+				right: 19px;
+				top: 2px;
+				width: 3px;
+				bottom: 2px;
+				background: var(--light);
+				z-index: 0;
+			}
+		}
 		@media only screen and (max-width: 992px) {
 			flex-direction: column;
 			justify-content: space-around;
@@ -90,7 +118,6 @@
 				width: 20px;
 				height: 20px;
 			}
-		
 		}
 	}
 	&Collaborations,

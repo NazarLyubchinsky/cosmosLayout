@@ -1,22 +1,4 @@
 .artMenu {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 2.8rem;
-	position: relative;
-	right: 4px;
-	z-index: 1;
-
-	&::after {
-		content: "";
-		position: absolute;
-		right: 19px;
-		top: 2px;
-		width: 3px;
-		bottom: 2px;
-		background: var(--light);
-		z-index: 0;
-	}
-
 	&Card {
 		margin-top: 0;
 		height: 0;
@@ -125,65 +107,17 @@
 	}
 }
 
+.cardMore {
+	position: relative !important;
+	padding-left: 2.5rem !important;
 
-// modal
-.modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #091419;
-	z-index: 999;
-	background-size: cover;
-	overflow-y: auto;
- 
-	&Title {
-	  font-family: "TTOctosquares";
-	  font-size: 6vw;
-	  font-weight: 500;
-	  line-height: 1.2;
-	  max-width: 848px;
-	  line-height: 1.4;
-	  text-transform: uppercase;
-	  background-repeat: no-repeat;
-	  background-position: left center;
-	  text-indent: -1234em;
-	  margin: 30px 0 20px;
-	  background-size: contain;
-	}
- 
-	&Text {
-	  margin-bottom: 20px;
-	}
- 
-	&Header {
-	  width: 100%;
-	  display: flex;
-	  justify-content: space-between;
-	}
- 
-	&Container {
-	  min-width: 900px;
-	  padding: 50px;
-	  box-sizing: border-box;
-	  display: grid;
-	  grid-template-rows: auto auto auto 1fr;
-	  gap: 20px;
-	  max-height: 100vh;
-	}
- 
-	&Content {
-	  padding-bottom: 50px;
-	}
- 
 	&Button {
-	  padding-left: 30px;
-	  padding-right: 30px;
+		left: 0 !important;
+		top: 10% !important;
+		position: absolute !important;
 	}
- 
-	&Arrow {
-	  display: inline-block;
-	  margin-left: 10px;
+
+	&Image {
+		display: block;
 	}
- }
+}

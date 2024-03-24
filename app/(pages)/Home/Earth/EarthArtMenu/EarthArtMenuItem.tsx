@@ -3,7 +3,6 @@ import Link from "next/link"
 import styles from './style.module.scss';
 import cl from 'classnames';
 import Image from "next/image";
-import { EarthArtMenuItemButton } from "./EarthArtMenuItemButton";
 import { Button, TypeArtButton } from "@/src/components/Button";
 
 interface EarthArtMenuItemProps {
@@ -44,55 +43,35 @@ export const EarthArtMenuItem: React.FC<EarthArtMenuItemProps> = ({
 }) => {
 	return (
 		<Link
-			href={`${href}`}
-			onClick={onClick}
-			className={cl(
-				styles.artMenuItem,
-				isOpened && styles.artMenuItemActive
-			)}
-		>
-			<h3 className={styles.artMenuItemTitle}>{title}</h3>
-			<div className={cl(
-				styles.cardMore,
-				styles.artMenuCard
-			)}>
-				{/* <EarthArtMenuItemButton id={id} /> */}
-				{/* <Button
+		href={href}
+		onClick={onClick}
+		className={cl(
+			styles.artMenuItem,
+			isOpened && styles.artMenuItemActive
+		)}
+	>
+		<h3 className={styles.artMenuTitle}>{title}</h3>
+		<div className={cl(
+			styles.cardMore,
+			styles.artMenuCard
+		)}>
+			<Button
 				kind='Button'
 				type={getTypeById(id)}
-				onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
-					e.stopPropagation()
-					e.preventDefault();
-					setIsModalOpen(true)
-					// if (window.history.pushState) {
-					// 	window.history.pushState({}, '', `pages/shop/${id}`);
-					// }
-				}
-				}
+				onClick={onClickButton}
 				className={styles.cardMoreButton}
 			>
 				More
-			</Button> */}
-				<Button
-					kind="Button"
-					type={getTypeById(id)}
-					onClick={onClickButton}
-					className={styles.cardMoreButton}
-				>
-					More
-				</Button>
-				<Image
-					src={image}
-					alt={title}
-					width="271"
-					height="184"
-					style={{ maxWidth: '100%' }}
-					className={styles.cardMoreImage}
-					loading="lazy"
-				/>
-			</div>
-			<span className={styles.artMenuDecorator} />
-		</Link>
-
+			</Button>
+			<Image
+				src={image}
+				alt={title}
+				width="271"
+				height="184"
+				className={styles.cardMoreImage}
+			/>
+		</div>
+		<span className={styles.artMenuDecorator} />
+	</Link>
 	)
 }
