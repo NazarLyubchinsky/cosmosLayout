@@ -27,22 +27,22 @@ export const EarthArtMenuItemButton: React.FC<EarthArtMenuItemButtonProps> = ({
 	const { setIsModalOpen } = useTodoContext();
 	return (
 		<>
-			<Button
+			{/* <Button
 				kind='Button'
 				type={getTypeById(id)}
 				onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
 					e.stopPropagation()
 					e.preventDefault();
 					setIsModalOpen(true)
-					if (window.history.pushState) {
-						window.history.pushState({}, '', `pages/shop/${id}`);
-					}
+					// if (window.history.pushState) {
+					// 	window.history.pushState({}, '', `pages/shop/${id}`);
+					// }
 				}
 				}
 				className={styles.cardMoreButton}
 			>
 				More
-			</Button>
+			</Button> */}
 		</>
 	)
 }

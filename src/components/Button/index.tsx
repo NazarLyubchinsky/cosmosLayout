@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 import cl from 'classnames';
 import { ButtonAngleLeft, ButtonAngleRight } from './ButtonAngle';
 
-export type TypeArtButton = 'BluePurple' | 'GreenYellow' | 'Blue' | 'YellowPink';
+export type TypeArtButton = 'BluePurple' | 'GreenYellow' | 'Blue' | 'YellowPink'| 'Transparent' | 'White';
 export type ButtonKind = 'Button' | 'ButtonRotate';
 
 interface ButtonProps {

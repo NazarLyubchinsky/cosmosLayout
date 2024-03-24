@@ -98,6 +98,7 @@ export const RoadMapArtMenu = ({ }: RoadMapArtMenuProps) => {
 				alt={'roadMap'}
 				width="1000"
 				height="1000"
+				loading="lazy"
 				style={{ maxWidth: '100%', objectFit: 'cover', height: 'auto' }}
 				className={styles.artMenuBg}
 			/>

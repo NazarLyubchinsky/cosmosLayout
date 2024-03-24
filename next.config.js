@@ -12,6 +12,7 @@ const nextConfig = {
 				hostname: 'th.bing.com',
 				port: '',
 			},
+		
 		],
 	},
 }
