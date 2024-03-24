@@ -14,6 +14,8 @@ export const ContextProvider: React.FC<StoreProviderProps> = ({ children }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [openedId, setOpenedId] = useState(1);
 
+	
+
 
 	const [centerIndex, setCenterIndex] = useState<number>(0);
 	useEffect(() => {

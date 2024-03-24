@@ -4,6 +4,7 @@ import styles from './style.module.scss';
 import cl from 'classnames';
 import Image from "next/image";
 import { EarthArtMenuItemButton } from "./EarthArtMenuItemButton";
+import { Button, TypeArtButton } from "@/src/components/Button";
 
 interface EarthArtMenuItemProps {
 	id: number
@@ -12,6 +13,22 @@ interface EarthArtMenuItemProps {
 	title: string
 	isOpened: boolean
 	onClick: (event: React.MouseEvent) => void
+	onClickButton: (event: React.MouseEvent) => void
+}
+const getTypeById = (id: number): TypeArtButton => {
+	if (id === 1) {
+		return 'YellowPink';
+	}
+
+	if (id === 2) {
+		return 'Blue';
+	}
+
+	if (id === 3) {
+		return 'BluePurple';
+	}
+
+	return 'GreenYellow';
 }
 
 
@@ -22,7 +39,8 @@ export const EarthArtMenuItem: React.FC<EarthArtMenuItemProps> = ({
 	image,
 	title,
 	isOpened,
-	onClick
+	onClick,
+	onClickButton
 }) => {
 	return (
 		<Link
@@ -38,7 +56,31 @@ export const EarthArtMenuItem: React.FC<EarthArtMenuItemProps> = ({
 				styles.cardMore,
 				styles.artMenuCard
 			)}>
-				<EarthArtMenuItemButton id={id} />
+				{/* <EarthArtMenuItemButton id={id} /> */}
+				{/* <Button
+				kind='Button'
+				type={getTypeById(id)}
+				onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+					e.stopPropagation()
+					e.preventDefault();
+					setIsModalOpen(true)
+					// if (window.history.pushState) {
+					// 	window.history.pushState({}, '', `pages/shop/${id}`);
+					// }
+				}
+				}
+				className={styles.cardMoreButton}
+			>
+				More
+			</Button> */}
+				<Button
+					kind="Button"
+					type={getTypeById(id)}
+					onClick={onClickButton}
+					className={styles.cardMoreButton}
+				>
+					More
+				</Button>
 				<Image
 					src={image}
 					alt={title}
@@ -46,6 +88,7 @@ export const EarthArtMenuItem: React.FC<EarthArtMenuItemProps> = ({
 					height="184"
 					style={{ maxWidth: '100%' }}
 					className={styles.cardMoreImage}
+					loading="lazy"
 				/>
 			</div>
 			<span className={styles.artMenuDecorator} />

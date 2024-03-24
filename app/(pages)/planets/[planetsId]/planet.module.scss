@@ -25,6 +25,7 @@
 			background-repeat: no-repeat;
 		}
 		&Content {
+			width: 45%;
 			min-width: 360px;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -59,8 +60,8 @@
 		flex-direction: column !important;
 		align-items: center;
 		&Content {
-			min-width: unset!important;
-			width: calc(100% - 2rem);
+			min-width: unset !important;
+			width: calc(100% - 2rem)!important;
 		}
 	}
 }

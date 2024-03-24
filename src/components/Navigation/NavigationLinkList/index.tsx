@@ -25,8 +25,6 @@ export const NavigationLinkList = ({ link, onClick, id, }: NavigationLinkList) =
 		localStorage.setItem('activeId', (link.id - 1).toString());
 	};
 
-
-
 	return (
 		<Fragment key={link.id}>
 			<Link
