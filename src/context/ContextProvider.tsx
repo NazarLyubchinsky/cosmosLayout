@@ -12,6 +12,10 @@ interface StoreProviderProps {
 export const ContextProvider: React.FC<StoreProviderProps> = ({ children }) => {
 	const [activeLinkId, setActiveLinkId] = useState<string | null>('home' || null);
 	const [isModalOpen, setIsModalOpen] = useState(false);
+<<<<<<< Updated upstream
+=======
+	const [openedId, setOpenedId] = useState(1);
+>>>>>>> Stashed changes
 	const [centerIndex, setCenterIndex] = useState<number>(0);
 	
 	const [openedId, setOpenedId] = useState(1);
