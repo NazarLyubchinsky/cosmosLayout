@@ -8,6 +8,7 @@
 	}
 
 	&Item {
+		cursor: pointer;
 		color: var(--light);
 		text-decoration: none;
 		display: block;
@@ -119,5 +120,21 @@
 
 	&Image {
 		display: block;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.cardMore {
+		padding-left: 0 !important;
+		padding-bottom: 8px !important;
+
+		&Button {
+			padding-left: 50px;
+			left: 55px !important;
+			top: 71% !important;
+		}
+		&Image {
+			width: 100%;
+		}
 	}
 }

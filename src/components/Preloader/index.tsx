@@ -2,10 +2,17 @@
 import React from 'react'
 // loader
 import LoadingOverlay from 'react-loading-overlay-nextgen';
+import clx from 'classnames'
 
-const Preloader = () => {
+interface PreloaderProps {
+	className?: string
+}
+
+const Preloader = ({ className }: PreloaderProps) => {
+	const PreloaderClasses = clx(
+		className,)
 	return (
-		<div style={{
+		<div className={PreloaderClasses} style={{
 			padding: '50px',
 			height: 'calc(100vh - 178px)',
 			backgroundColor: '#24273f',

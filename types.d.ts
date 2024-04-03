@@ -35,7 +35,7 @@ interface Planet {
 	surface_water: string,
 	created: string,
 	edited: string
-	
+
 
 }
 
@@ -58,4 +58,24 @@ interface PlanetResponse {
 	result: {
 		properties: Planet
 	},
+}
+
+
+interface ModalInfo {
+	title: string;
+	titleUrl: string;
+	content: ReactNode;
+	coverImage: string;
+	listImages: {
+		src: string;
+		type: 'color' | 'dark';
+	}[]
+}
+interface ArtMenuLinks {
+	id: number;
+	href: string;
+	title: string;
+	image: string;
+	active: boolean;
+	modalInfo: ModalInfo;
 }

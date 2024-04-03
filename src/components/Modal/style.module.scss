@@ -1,0 +1,148 @@
+.modal {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	// overflow-y: auto;
+
+	&Title {
+		font-family: "TTOctosquares";
+		font-size: 6vw;
+		font-weight: 500;
+		line-height: 1.2;
+		max-width: 848px;
+		line-height: 1.4;
+		text-transform: uppercase;
+		background-repeat: no-repeat;
+		background-position: left center;
+		text-indent: -1234em;
+		margin: 30px 0 20px;
+		background-size: contain;
+	}
+
+	&Text {
+		margin-bottom: 20px;
+		color: var(--light);
+	}
+
+	&Header {
+		// position: fixed;
+		// width: calc(100% - 40px);
+		display: flex;
+		justify-content: space-between;
+		z-index: 100;
+	}
+
+
+
+	&Content {
+		padding-bottom: 50px;
+
+		// display: grid;
+		// grid-template-columns: 1fr 1fr 1fr 1fr;
+		// gap: 0px 40px;
+	}
+
+	&Button {
+		padding-left: 30px;
+		padding-right: 30px;
+		color: var(--light);
+		&:hover {
+			.modalArrowPath {
+				stroke: var(--dark);
+			}
+		}
+	}
+
+	&Arrow {
+		display: inline-block;
+		margin-left: 10px;
+	}
+}
+
+.text {
+	font-family: "Move X";
+	font-size: 15px;
+	line-height: 1.2;
+	max-width: 848px;
+	line-height: 1.4;
+	text-transform: uppercase;
+
+	p {
+		margin-bottom: 13px;
+	}
+}
+@media screen and (max-width: 576px) {
+	.modal {
+		&Title {
+			background-position: center;
+		}
+		&Container {
+			padding: 20px;
+		}
+		&Button {
+			display: none;
+			&Mobile {
+				cursor: pointer;
+
+				border: none;
+				box-shadow: none;
+				font:
+					1.1429rem / 1rem "NeueMachina",
+					sans-serif;
+				background: none;
+				transition: opacity 0.3s;
+				&:hover {
+					opacity: 0.8;
+				}
+				&Arrow {
+					rotate: 180deg;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 576px) {
+	.modal {
+		&Button {
+			&Mobile {
+				display: none;
+			}
+		}
+	}
+}
+
+.active {
+	background-color: red;
+	// top: -30px;
+}
+
+
+// card
+.cardList {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 0px 40px;
+
+	*:nth-child(2n) {
+		margin-top: 40px;
+	}
+	@media screen and (max-width: 992px) {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 30px;
+		*:nth-child(2n) {
+			margin-top: unset;
+		}
+		*:nth-child(3n + 2) {
+			margin-top: 25px;
+		}
+	}
+	@media screen and (max-width: 576px) {
+		grid-template-columns: 1fr 1fr;
+		*:nth-child(3n + 2) {
+			margin-top: unset;
+		}
+	}
+	@media screen and (max-width: 350px) {
+		grid-template-columns: 1fr;
+	}
+}

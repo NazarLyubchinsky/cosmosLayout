@@ -1,12 +1,12 @@
 import cl from 'classnames';
 import styles from './style.module.scss';
 
-interface TextModalProps {
+interface ModalTextProps {
 	children: React.ReactNode;
 	className?: string;
 }
 
-export const TextModal: React.FC<TextModalProps> = ({
+export const ModalText: React.FC<ModalTextProps> = ({
 	children,
 	className
 }) => (

@@ -11,6 +11,7 @@ interface ArtMenuProps {
 	isActiveid: string
 }
 export const Main = ({ children, isActiveid }: ArtMenuProps) => {
+
 	return (
 		<section className={cl(styles.section, styles.sectionMain)} id={isActiveid} >
 			<Navigation />

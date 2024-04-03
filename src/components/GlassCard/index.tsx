@@ -9,9 +9,11 @@ interface GlassCardProps {
 
 export const GlassCard: React.FC<GlassCardProps> = ({
 	imageUrl,
-	type
-}) => (
-	<div className={cl(styles.classCard, styles[type])}>
-		<Image width={100} height={100} src={imageUrl} alt="Card" className={styles.classCardImage} />
-	</div>
-);
+	type,
+}) => {
+	return (
+		<div className={cl(styles.classCard, styles[type])}>
+			<Image loading="lazy" width={210} height={137} src={imageUrl} alt="Card" className={styles.classCardImage} />
+		</div>
+	);
+}

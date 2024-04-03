@@ -15,12 +15,16 @@
 	box-sizing: border-box;
 
 	&Image {
+		width: auto;
+		height: auto;
 		position: absolute;
 		max-width: 77%;
+		max-height: 100%;
 	}
 }
 
 .dark {
+	cursor: pointer;
 	img {
 		transition: all 0.3s;
 		filter: brightness(10%);

@@ -1,16 +1,28 @@
-import { createContext } from "react";
+import { ReactNode, createContext } from "react";
+export interface ModalInfo {
+	title: string;
+	titleUrl: string;
+	content: ReactNode;
+	coverImage: string;
+	listImages: {
+		src: string;
+		type: 'color' | 'dark';
+	}[]
+}
+
 
 export interface ContextProps {
 	isModalOpen: boolean,
-	openedId: number,
 	activeLinkId: string | null,
 	setActiveLinkId: (newLinkId: string) => void;
 	setIsModalOpen: (newIsModalOpen: boolean) => void;
-	setOpenedId: (newOpenedId: number) => void;
 
 
 	centerIndex: number;
 	setCenterIndex: (newCenterIndex: number) => void
+
+	modalInfo: ModalInfo | null,
+	setModalInfo: (newModalInfo: ModalInfo | null) => void
 
 }
 
@@ -18,13 +30,14 @@ export interface ContextProps {
 export const Context = createContext<ContextProps>({
 	activeLinkId: '',
 	isModalOpen: false,
-	openedId: 1,
 	setActiveLinkId: () => { },
 	setIsModalOpen: () => { },
-	setOpenedId: () => { },
 
 
 	centerIndex: 0,
-	setCenterIndex: () => { }
+	setCenterIndex: () => { },
+
+	modalInfo: null,
+	setModalInfo: () => { }
 });
 

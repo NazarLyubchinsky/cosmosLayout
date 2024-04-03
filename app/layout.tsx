@@ -10,8 +10,10 @@ import AOSinit from '@/src/hooks/useAos';
 
 export default function RootLayout({
 	children,
+	modal,
 }: {
-	children: React.ReactNode
+	children: React.ReactNode,
+	modal: React.ReactNode
 }) {
 	const seo = {
 		title: 'Dusktopia ☄️',
@@ -30,6 +32,9 @@ export default function RootLayout({
 				<Header />
 				{children}
 				<Footer />
+				{modal}
+				<div id="modal-root" />
+				{/* <div id="modal-roots" /> */}
 			</body>
 		</html>
 	)

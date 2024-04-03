@@ -18,15 +18,6 @@
 	&Earth {
 		background: url("/bg/earth_2_bg.jpg") center no-repeat no-repeat;
 		justify-content: space-between;
-		.cardList {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			gap: 0px 40px;
-
-			*:nth-child(2n) {
-				margin-top: 40px;
-			}
-		}
 		.artMenu {
 			position: relative;
 			display: grid;
@@ -125,8 +116,7 @@
 	&Teams {
 		align-items: center;
 		padding-bottom: 16.875rem;
-		// padding-left: 1.25rem;
-		// padding-right: 1.25rem;
+
 		&Container {
 			width: 100%;
 			display: flex;
@@ -186,3 +176,4 @@
 		}
 	}
 }
+

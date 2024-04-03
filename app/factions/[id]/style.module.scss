@@ -1,0 +1,10 @@
+.modalContainer {
+	background-color: black;
+	padding: 7.1429rem 50px 0px;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-rows: auto auto auto 1fr;
+	gap: 20px;
+	background-size: cover !important;
+	height: 100%;
+}

@@ -1,8 +1,8 @@
 "use client"
 
-import React, { useEffect, useMemo, useState } from "react"
+import React, { ReactNode, useEffect, useMemo, useState } from "react"
 
-import { Context } from './context'
+import { Context, ModalInfo } from './context'
 
 
 interface StoreProviderProps {
@@ -12,9 +12,11 @@ interface StoreProviderProps {
 export const ContextProvider: React.FC<StoreProviderProps> = ({ children }) => {
 	const [activeLinkId, setActiveLinkId] = useState<string | null>('home' || null);
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [openedId, setOpenedId] = useState(1);
 	const [centerIndex, setCenterIndex] = useState<number>(0);
 
+
+
+	const [modalInfo, setModalInfo] = useState<ModalInfo | null>(null);
 
 
 	useEffect(() => {
@@ -32,11 +34,11 @@ export const ContextProvider: React.FC<StoreProviderProps> = ({ children }) => {
 		useMemo(
 			() =>
 			({
-				activeLinkId, setActiveLinkId, isModalOpen, setIsModalOpen, openedId, setOpenedId, centerIndex, setCenterIndex
+				activeLinkId, setActiveLinkId, isModalOpen, setIsModalOpen, centerIndex, setCenterIndex, modalInfo, setModalInfo
 
 			})
 			,
-			[activeLinkId, setActiveLinkId, isModalOpen, setIsModalOpen, openedId, setOpenedId, centerIndex, setCenterIndex
+			[activeLinkId, setActiveLinkId, isModalOpen, setIsModalOpen, centerIndex, setCenterIndex, modalInfo, setModalInfo
 
 			]
 		);

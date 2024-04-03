@@ -5,27 +5,11 @@ import { Button } from "../Button"
 import { Logo } from "../Logo"
 import { SocialNetworks } from "../SocialNetworks"
 import cl from "classnames"
-import styles from './styles.module.scss'
 import { Burger } from "./Burger"
-import { useEffect, useRef, useState } from "react"
+import styles from './styles.module.scss'
+import { useEffect, useState } from "react"
 export const Header = () => {
-	// const prevScrollPosRef = useRef(0);
-	// const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
-	// useEffect(() => {
-	// 	const handleScroll = () => {
-	// 		const currentScrollPos = window.scrollY;
-	// 		requestAnimationFrame(() => {
-	// 			setIsHeaderVisible(prevScrollPosRef.current > currentScrollPos || currentScrollPos < 10);
-	// 			prevScrollPosRef.current = currentScrollPos;
-	// 		});
-	// 	};
-	// 	window.addEventListener('scroll', handleScroll);
-
-	// 	return () => {
-	// 		window.removeEventListener('scroll', handleScroll);
-	// 	};
-	// }, [isHeaderVisible]);
 	const [active, setActive] = useState('');
 	const [lastScroll, setLastScroll] = useState(0);
 	const handleScroll = () => {
@@ -45,16 +29,15 @@ export const Header = () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	});
+
 	return (
 
 		<header
-			// data-aos="fade-down"
 			className={cl(styles.header,
-				 active ? `${styles.active}` : null
-				 )}
+				active && styles.active
+			)}
 			style={{
 				color: 'black',
-				// top: isHeaderVisible ? '' : '-100px'
 			}}
 		>
 			<Logo />

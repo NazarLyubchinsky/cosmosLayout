@@ -27,7 +27,10 @@ $size-border: 2px;
 		&::after {
 			background: var(--light);
 		}
-
+		.modalArrow {
+			color: blueviolet;
+			stroke: #9d65bf;
+		}
 		.artButtonText {
 			color: var(--dark);
 		}
@@ -207,7 +210,6 @@ $size-border: 2px;
 		min-height: 220px;
 		height: 100%;
 	}
-
 
 	&Active {
 		background-color: #fff;
