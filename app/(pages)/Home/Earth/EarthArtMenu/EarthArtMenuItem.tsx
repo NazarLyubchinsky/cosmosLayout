@@ -49,18 +49,23 @@ export const EarthArtMenuItem: React.FC<EarthArtMenuItemProps> = ({
 				styles.cardMore,
 				styles.artMenuCard
 			)}>
-				<Link href={`/factions/${id}`}
-					// onClick={(e) => e.stopPropagation()}
-				>
+				{/* <Link href={`/factions/${id}`}
+					onClick={(e) => e.stopPropagation()}
+				> */}
 					<Button
 						kind='Button'
 						type={getTypeById(id)}
 
 						className={styles.cardMoreButton}
 					>
+							<Link href={`/factions/${id}`}
+					onClick={(e) => e.stopPropagation()}
+				>
+
 						More
-					</Button>
 				</Link>
+					</Button>
+				{/* </Link> */}
 				<Image
 					src={image}
 					alt={title}
