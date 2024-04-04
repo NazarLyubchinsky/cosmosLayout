@@ -35,7 +35,7 @@ export function Modal({
 		};
 	}, [backgroundUrl]);
 
-	return createPortal(<div className="modal-backdrop" >
+	return createPortal(<div className="modal-backdrop">
 		<dialog ref={dialogRef} className={styles.modal} onClose={() => router.back()} style={{
 			backgroundImage: `url(${backgroundUrl})`,
 			backgroundColor: 'black',
